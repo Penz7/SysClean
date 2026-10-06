@@ -132,11 +132,3 @@ adb shell am instrument -w -e class vn.sysclean.SmokeTest vn.sysclean.test/andro
 | `RootModeTest` | Turning on root mode on an unrooted phone fails cleanly |
 
 On Xiaomi/MIUI, confirm "Install via USB" when asked, and allow background activity starts with `adb shell appops set vn.sysclean 10021 allow`.
-
-## Roadmap
-
-- ~~Cleaning, Shizuku, root mode, widget~~ ✅
-- ~~Speed diagnosis, one-tap optimisation, RAM manager~~ ✅
-- ~~Battery drain, step-by-step Shizuku setup~~ ✅
-- ~~Signed release, Google Play submission~~ ✅
-- **Next:** public release on Google Play after closed testing; verify root mode on a real rooted phone.

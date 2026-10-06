@@ -132,11 +132,3 @@ adb shell am instrument -w -e class vn.sysclean.SmokeTest vn.sysclean.test/andro
 | `RootModeTest` | Bật chế độ root trên máy chưa root bị từ chối gọn gàng |
 
 Trên Xiaomi/MIUI: bấm xác nhận "Cài đặt qua USB" khi được hỏi, và cho phép mở activity từ nền bằng `adb shell appops set vn.sysclean 10021 allow`.
-
-## Lộ trình
-
-- ~~Dọn dẹp, Shizuku, chế độ root, widget~~ ✅
-- ~~Chẩn đoán tốc độ, tối ưu một chạm, quản lý RAM~~ ✅
-- ~~App hao pin, thiết lập Shizuku từng bước~~ ✅
-- ~~Ký bản release, gửi Google Play~~ ✅
-- **Tiếp theo:** phát hành chính thức trên Google Play sau thử nghiệm kín; kiểm chứng chế độ root trên máy root thật.
