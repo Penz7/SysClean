@@ -65,6 +65,9 @@
     <string name="settings_shizuku_step3">In Developer options, turn on \"Wireless debugging\" (Wi-Fi must be on).</string>
     <string name="settings_shizuku_step4">In Shizuku tap "Pairing" and allow its notification. In Wireless debugging tap "Pair device with pairing code" and type the code into the Shizuku notification.</string>
     <string name="settings_shizuku_step5">Back in Shizuku tap "Start", then return here and tap "Allow SysClean".</string>
+    <string name="settings_shizuku_pairing_tip_title">Keep the code dialog open</string>
+    <string name="settings_shizuku_pairing_tip">Keep the pairing-code dialog open while you type the code into the Shizuku notification: the code stops working as soon as the dialog closes. If it closes when you pull down the notifications, open Settings and Shizuku in split screen and try again.</string>
+    <string name="settings_shizuku_restart_tip">If SysClean was reinstalled and cannot connect, stop and start Shizuku again so it recognises the new installation.</string>
     <string name="settings_shizuku_step_pc">With a computer: connect over USB with USB debugging on and run the adb command shown in Shizuku.</string>
     <string name="settings_shizuku_step_pc_only">Android 10 and older have no wireless debugging: turn on \"USB debugging\", connect to a computer and run the adb command shown in Shizuku. Repeat after each restart.</string>
     <string name="settings_open_dev_options">Open Developer options</string>

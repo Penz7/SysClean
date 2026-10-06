@@ -10,3 +10,6 @@ build/
 .cxx
 *.keystore
 !debug.keystore
+/keystore.properties
+*.jks
+/keystore/

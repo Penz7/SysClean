@@ -64,6 +64,9 @@
     <string name="settings_shizuku_step3">Trong Tùy chọn nhà phát triển, bật \"Gỡ lỗi không dây\" (cần bật Wi-Fi).</string>
     <string name="settings_shizuku_step4">Trong Shizuku chọn "Ghép nối" và cho phép thông báo. Vào Gỡ lỗi không dây › "Ghép nối thiết bị bằng mã ghép nối" rồi nhập mã vào thông báo của Shizuku.</string>
     <string name="settings_shizuku_step5">Quay lại Shizuku bấm "Bắt đầu", sau đó trở lại đây bấm "Cho phép SysClean".</string>
+    <string name="settings_shizuku_pairing_tip_title">Giữ hộp thoại mã luôn mở</string>
+    <string name="settings_shizuku_pairing_tip">Giữ hộp thoại mã ghép nối luôn mở trong lúc nhập mã vào thông báo của Shizuku: mã hết hiệu lực ngay khi hộp thoại đóng. Nếu hộp thoại tự đóng khi bạn kéo thanh thông báo xuống, hãy mở Cài đặt và Shizuku ở chế độ chia đôi màn hình rồi thử lại.</string>
+    <string name="settings_shizuku_restart_tip">Nếu vừa cài lại SysClean mà không kết nối được, hãy dừng rồi bật lại Shizuku để Shizuku nhận bản cài mới.</string>
     <string name="settings_shizuku_step_pc">Dùng máy tính: cắm USB, bật Gỡ lỗi USB và chạy lệnh adb mà Shizuku hiển thị.</string>
     <string name="settings_shizuku_step_pc_only">Android 10 trở xuống không có Gỡ lỗi không dây: bật \"Gỡ lỗi USB\", cắm vào máy tính và chạy lệnh adb hiển thị trong Shizuku. Làm lại sau mỗi lần khởi động máy.</string>
     <string name="settings_open_dev_options">Mở Tùy chọn nhà phát triển</string>

@@ -444,7 +444,20 @@ private fun ShizukuGuide(hasWirelessDebugging: Boolean, onOpenDeveloperOptions: 
                     Text(stringResource(step), style = MaterialTheme.typography.bodyMedium)
                 }
             }
+            if (hasWirelessDebugging) {
+                // Where people actually get stuck: the code dies with the dialog.
+                Banner(
+                    icon = Icons.Outlined.Info,
+                    title = stringResource(R.string.settings_shizuku_pairing_tip_title),
+                    body = stringResource(R.string.settings_shizuku_pairing_tip),
+                )
+            }
             OutlinedButton(onClick = onOpenDeveloperOptions) { Text(stringResource(R.string.settings_open_dev_options)) }
+            Text(
+                stringResource(R.string.settings_shizuku_restart_tip),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
             if (hasWirelessDebugging) Text(
                 stringResource(R.string.settings_shizuku_step_pc),
                 style = MaterialTheme.typography.bodySmall,

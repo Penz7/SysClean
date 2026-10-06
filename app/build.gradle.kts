@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.sysclean.android.application)
     alias(libs.plugins.sysclean.android.compose)
@@ -5,13 +7,30 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+// Release signing comes from keystore.properties (git-ignored, never committed). Without it the
+// release build is produced unsigned, so anyone can still build the project.
+val keystoreProperties = Properties().apply {
+    rootProject.file("keystore.properties").takeIf { it.exists() }?.inputStream()?.use(::load)
+}
+
 android {
     namespace = "vn.sysclean"
 
+    signingConfigs {
+        if (!keystoreProperties.isEmpty) {
+            create("release") {
+                storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+            }
+        }
+    }
+
     defaultConfig {
         applicationId = "vn.sysclean"
-        versionCode = 6
-        versionName = "0.6.0"
+        versionCode = 7
+        versionName = "0.6.1"
     }
 
     androidResources {
@@ -24,6 +43,7 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.findByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }

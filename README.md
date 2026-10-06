@@ -1,6 +1,6 @@
 # SysClean
 
-Ứng dụng phân tích và dọn dẹp hệ thống cho Android. **Phiên bản 0.6: phân tích + dọn dẹp + dọn sâu (Shizuku/Root) + widget + tối ưu hiệu năng & RAM, chạy như nhau trên mọi hãng.**
+Ứng dụng phân tích và dọn dẹp hệ thống cho Android. **Phiên bản 0.6.1: phân tích + dọn dẹp + dọn sâu (Shizuku/Root) + widget + tối ưu hiệu năng & RAM, chạy như nhau trên mọi hãng.**
 
 - minSdk 26 (Android 8.0) · targetSdk 36 · Kotlin 2.2 · Jetpack Compose + Material 3 · Hilt
 - Ngôn ngữ: Tiếng Anh, Tiếng Việt (mặc định theo hệ thống, đổi được trong Cài đặt)
@@ -108,6 +108,9 @@ sau 3 s cho kernel trả trang; nói rõ Android sẽ dần nạp lại (bình t
   Màn "Ứng dụng cài sẵn" cũng có mục này (chỉ *Tắt*, không *Gỡ*), và mục khôi phục liệt kê mọi app cài sẵn đang bị tắt.
 - Hướng dẫn Shizuku theo hãng (`ShizukuQuirk`): Xiaomi (Gỡ lỗi USB – bảo mật), OPPO/realme/OnePlus (Tắt giám sát quyền),
   Meizu (Bảo vệ thanh toán Flyme); Android 8–10 chỉ hướng dẫn cách dùng máy tính.
+- Hướng dẫn ghép nối nhấn mạnh chỗ người dùng hay kẹt (đã kiểm chứng trên Galaxy A25): mã ghép nối hết hiệu lực khi hộp
+  thoại đóng, nên phải giữ hộp thoại mở khi nhập mã vào thông báo Shizuku (gợi ý chia đôi màn hình). Sau khi cài lại
+  SysClean, cần dừng/bật lại Shizuku (server cũ giữ UID cũ, `attachApplication` lỗi NPE — gặp trên Xiaomi).
 - Không bao giờ đụng: hệ thống lõi, launcher, bàn phím, trợ năng, đọc thông báo, quản trị thiết bị, SMS/điện thoại
   mặc định, VPN luôn bật, SysClean, Shizuku (`AppClassifier`, có unit test).
 - Test dùng app mẫu `:fixture` (`vn.sysclean.fixture`) để không đụng app thật.
@@ -140,9 +143,20 @@ Quy tắc: `feature` không phụ thuộc `feature` khác; điều hướng gi�
 
 ```bash
 ./gradlew assembleDebug                 # app/build/outputs/apk/debug/app-debug.apk
-./gradlew assembleRelease               # bản R8 (~2 MB), cần cấu hình signingConfig để phát hành
+./gradlew assembleRelease               # bản R8 (~3 MB), ký nếu có keystore.properties, nếu không thì chưa ký
 ./gradlew testDebugUnitTest             # unit test (scanner, health score, bộ lọc app, formatter, sysfs)
 ```
+
+**Ký bản release:** tạo `keystore.properties` ở thư mục gốc (đã nằm trong `.gitignore`, không bao giờ commit):
+
+```properties
+storeFile=/đường/dẫn/tới/sysclean-release.jks
+storePassword=...
+keyAlias=sysclean
+keyPassword=...
+```
+
+Giữ keystore và mật khẩu cẩn thận: mất keystore thì không thể phát hành bản cập nhật cài đè lên bản cũ.
 
 ### Test trên máy thật
 
