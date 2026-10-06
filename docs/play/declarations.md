@@ -16,7 +16,7 @@ Câu trả lời bằng tiếng Anh (Google duyệt bằng tiếng Anh). Chú th
 >
 > The permission is requested only after an in-app explanation, from the Settings screen. All processing happens on the device; the app has no INTERNET permission and transmits nothing.
 
-**Video:** xem mục 7 (kịch bản), tải lên YouTube để *Unlisted*, dán link.
+**Video:** `https://penz7.github.io/SysClean/play/videos/all-files-access.mp4` — 32 giây, phụ đề tiếng Anh: hộp thoại giải thích → bật quyền trong cài đặt Android → quét → kết quả (không lộ tên tệp). Kịch bản ở mục 7.
 
 ---
 
