@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -62,7 +63,6 @@ import androidx.core.os.LocaleListCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
-import vn.sysclean.core.privilege.ShizukuQuirk
 import vn.sysclean.core.data.repository.UserPreferencesRepository
 import vn.sysclean.core.designsystem.component.Banner
 import vn.sysclean.core.designsystem.component.InfoRow
@@ -83,6 +83,7 @@ internal fun SettingsScreen(
     onOpenTrash: () -> Unit,
     onOpenWhitelist: () -> Unit,
     onAddWidget: () -> Boolean,
+    onOpenShizukuSetup: () -> Unit,
     viewModel: SettingsViewModel = hiltViewModel(),
 ) {
     val access by viewModel.access.collectAsStateWithLifecycle()
@@ -153,14 +154,9 @@ internal fun SettingsScreen(
                         val (play, web) = viewModel.shizukuInstallIntents()
                         context.startActivityWithFallback(play, web)
                     },
-                    onOpenDeveloperOptions = {
-                        val (devOptions, aboutPhone) = viewModel.developerOptionsIntents()
-                        context.startActivityWithFallback(devOptions, aboutPhone)
-                    },
                     onOpenShizuku = { viewModel.shizukuLaunchIntent()?.let { context.startActivityWithFallback(it, null) } },
                     onGrantShizuku = viewModel::requestShizukuPermission,
-                    shizukuQuirk = viewModel.shizukuQuirk,
-                    hasWirelessDebugging = viewModel.hasWirelessDebugging,
+                    onOpenShizukuSetup = onOpenShizukuSetup,
                     enablingRoot = enablingRoot,
                     onEnableRoot = viewModel::enableRootMode,
                     onDisableRoot = viewModel::disableRootMode,
@@ -242,9 +238,7 @@ private fun AdvancedCard(
     onInstallShizuku: () -> Unit,
     onOpenShizuku: () -> Unit,
     onGrantShizuku: () -> Unit,
-    onOpenDeveloperOptions: () -> Unit,
-    shizukuQuirk: ShizukuQuirk?,
-    hasWirelessDebugging: Boolean,
+    onOpenShizukuSetup: () -> Unit,
     enablingRoot: Boolean,
     onEnableRoot: () -> Unit,
     onDisableRoot: () -> Unit,
@@ -294,23 +288,11 @@ private fun AdvancedCard(
                 FilledTonalButton(onClick = onGrantShizuku) { Text(stringResource(R.string.settings_shizuku_grant)) }
             ShizukuState.READY -> Unit
         }
-        // Only the brands that need an extra switch see one; everyone else has nothing to do.
-        if (shizukuQuirk != null && access.shizuku != ShizukuState.READY && access.shizuku != ShizukuState.NOT_INSTALLED) {
-            val (title, body) = when (shizukuQuirk) {
-                ShizukuQuirk.XIAOMI -> R.string.settings_shizuku_xiaomi_title to R.string.settings_shizuku_xiaomi_body
-                ShizukuQuirk.COLOROS -> R.string.settings_shizuku_coloros_title to R.string.settings_shizuku_coloros_body
-                ShizukuQuirk.FLYME -> R.string.settings_shizuku_flyme_title to R.string.settings_shizuku_flyme_body
-            }
-            Banner(
-                icon = Icons.Outlined.Info,
-                title = stringResource(title),
-                body = stringResource(body),
-                actionLabel = stringResource(R.string.settings_open_dev_options),
-                onAction = onOpenDeveloperOptions,
-            )
-        }
+        // The step-by-step guide replaces the wall of text: it ticks steps off from the phone's real state.
         if (access.shizuku != ShizukuState.READY) {
-            ShizukuGuide(hasWirelessDebugging, onOpenDeveloperOptions)
+            Button(onClick = onOpenShizukuSetup, modifier = Modifier.fillMaxWidth()) {
+                Text(stringResource(R.string.settings_shizuku_setup))
+            }
         }
         HorizontalDivider()
 
@@ -403,72 +385,6 @@ private fun LinkRow(title: String, description: String, onClick: () -> Unit) {
             Text(description, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, contentDescription = null)
-    }
-}
-
-@Composable
-private fun ShizukuGuide(hasWirelessDebugging: Boolean, onOpenDeveloperOptions: () -> Unit) {
-    var expanded by rememberSaveable { mutableStateOf(false) }
-    Column(verticalArrangement = Arrangement.spacedBy(SysCleanTheme.spacing.sm)) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable { expanded = !expanded },
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(
-                stringResource(R.string.settings_shizuku_guide),
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.weight(1f),
-            )
-            Icon(if (expanded) Icons.Outlined.ExpandLess else Icons.Outlined.ExpandMore, contentDescription = null)
-        }
-        if (expanded) {
-            // Android 8-10 has no wireless debugging: a computer is the only way to start Shizuku.
-            (
-                if (hasWirelessDebugging) {
-                    listOf(
-                        R.string.settings_shizuku_step1,
-                        R.string.settings_shizuku_step2,
-                        R.string.settings_shizuku_step3,
-                        R.string.settings_shizuku_step4,
-                        R.string.settings_shizuku_step5,
-                    )
-                } else {
-                    listOf(R.string.settings_shizuku_step1, R.string.settings_shizuku_step2, R.string.settings_shizuku_step_pc_only)
-                }
-                ).forEachIndexed { index, step ->
-                Row {
-                    Text("${index + 1}.", style = MaterialTheme.typography.bodyMedium, modifier = Modifier.width(24.dp))
-                    Text(stringResource(step), style = MaterialTheme.typography.bodyMedium)
-                }
-            }
-            if (hasWirelessDebugging) {
-                // Where people actually get stuck: the code dies with the dialog.
-                Banner(
-                    icon = Icons.Outlined.Info,
-                    title = stringResource(R.string.settings_shizuku_pairing_tip_title),
-                    body = stringResource(R.string.settings_shizuku_pairing_tip),
-                )
-            }
-            OutlinedButton(onClick = onOpenDeveloperOptions) { Text(stringResource(R.string.settings_open_dev_options)) }
-            Text(
-                stringResource(R.string.settings_shizuku_restart_tip),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            if (hasWirelessDebugging) Text(
-                stringResource(R.string.settings_shizuku_step_pc),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            Text(
-                stringResource(R.string.settings_shizuku_hint),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }
 

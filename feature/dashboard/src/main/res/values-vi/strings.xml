@@ -73,4 +73,9 @@
     <string name="dashboard_tip_action_cache">Cache ứng dụng</string>
     <string name="dashboard_tip_all_good">Hiện không có gì cần cải thiện.</string>
     <string name="dashboard_tip_junk_previous">Lần quét trước tìm thấy %1$s rác an toàn. Quét lại để dọn.</string>
+    <string name="dashboard_shizuku_stopped_title">Shizuku đã dừng</string>
+    <string name="dashboard_shizuku_stopped_body">Có lẽ máy vừa khởi động lại nên chế độ nâng cao đang tắt. Bật lại Gỡ lỗi không dây nếu cần rồi bấm \"Bắt đầu\" trong Shizuku: không cần ghép nối lại.</string>
+    <string name="dashboard_shizuku_stopped_action">Mở Shizuku</string>
+    <string name="dashboard_shizuku_stopped_guide">Hướng dẫn</string>
+    <string name="dashboard_shizuku_stopped_forget">Không nhắc nữa</string>
 </resources>

@@ -17,6 +17,7 @@ import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
+import androidx.compose.material.icons.outlined.BatteryAlert
 import androidx.compose.material.icons.outlined.Bolt
 import androidx.compose.material.icons.outlined.Memory
 import androidx.compose.material.icons.outlined.MonitorHeart
@@ -70,6 +71,7 @@ import java.util.Locale
 @Composable
 internal fun PerformanceScreen(
     onOpenRam: () -> Unit,
+    onOpenBattery: () -> Unit,
     onOpenSettings: () -> Unit,
     viewModel: PerformanceViewModel = hiltViewModel(),
 ) {
@@ -140,6 +142,21 @@ internal fun PerformanceScreen(
                     ) {
                         Text(
                             stringResource(R.string.perf_ram_manager_desc),
+                            style = MaterialTheme.typography.bodyMedium,
+                            modifier = Modifier.weight(1f),
+                        )
+                        Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, null)
+                    }
+                }
+            }
+            item {
+                SectionCard(title = stringResource(R.string.battery_title), icon = Icons.Outlined.BatteryAlert) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().clickable(onClick = if (state.privileged) onOpenBattery else onOpenSettings),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(
+                            stringResource(R.string.battery_entry_desc),
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.weight(1f),
                         )

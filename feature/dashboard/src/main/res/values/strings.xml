@@ -73,4 +73,9 @@
     <string name="dashboard_tip_action_cache">App cache</string>
     <string name="dashboard_tip_all_good">Nothing to improve right now.</string>
     <string name="dashboard_tip_junk_previous">The last scan found %1$s of safe junk. Scan again to clean it.</string>
+    <string name="dashboard_shizuku_stopped_title">Shizuku has stopped</string>
+    <string name="dashboard_shizuku_stopped_body">The phone was probably restarted, so advanced mode is off. Turn Wireless debugging back on if needed and tap \"Start\" in Shizuku: no pairing needed.</string>
+    <string name="dashboard_shizuku_stopped_action">Open Shizuku</string>
+    <string name="dashboard_shizuku_stopped_guide">Guide</string>
+    <string name="dashboard_shizuku_stopped_forget">Don\'t remind me</string>
 </resources>

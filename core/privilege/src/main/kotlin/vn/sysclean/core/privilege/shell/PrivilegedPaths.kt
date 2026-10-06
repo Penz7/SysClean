@@ -27,7 +27,9 @@ object PrivilegedPaths {
         return when (binary) {
             in allowedCommands -> true
             // Reading memory, frame and compile stats.
-            "dumpsys" -> command.getOrNull(1) in dumpsysServices
+            "dumpsys" -> command.getOrNull(1) in dumpsysServices ||
+                // Battery use, read-only: never --reset or any other option that changes it.
+                command.drop(1) == listOf("batterystats", "--checkin")
             // TRIM of the flash storage.
             "sm" -> command.drop(1) == listOf("fstrim")
             // Pressure stall information: how often apps waited for memory or I/O.
@@ -37,6 +39,19 @@ object PrivilegedPaths {
             else -> false
         }
     }
+
+    /**
+     * Drops output rows nobody reads before they cross Binder. Battery stats are the only case:
+     * per-wakelock, per-process and per-sensor rows are most of the dump and, after a few days
+     * on battery, would exceed what a Binder transaction can carry.
+     */
+    fun keepsOutputLine(command: List<String>, line: String): Boolean {
+        if (command != BATTERY_CHECKIN) return true
+        return line.split(',', limit = 5).getOrNull(3) in batteryRows
+    }
+
+    private val BATTERY_CHECKIN = listOf("dumpsys", "batterystats", "--checkin")
+    private val batteryRows = setOf("uid", "bt", "pws", "pwi", "wua", "awl", "cpu", "st")
 
     /** True for a package folder or anything inside it, never for the roots themselves. */
     fun isDeletable(path: String): Boolean {

@@ -37,7 +37,11 @@ class PrivilegedService() : IPrivilegedService.Stub() {
         val output = StringBuilder()
         val error = StringBuilder()
         val readers = listOf(
-            Thread { process.inputStream.bufferedReader().useLines { lines -> lines.forEach { output.appendLine(it) } } },
+            Thread {
+                process.inputStream.bufferedReader().useLines { lines ->
+                    lines.filter { PrivilegedPaths.keepsOutputLine(command.toList(), it) }.forEach { output.appendLine(it) }
+                }
+            },
             Thread { process.errorStream.bufferedReader().useLines { lines -> lines.forEach { error.appendLine(it) } } },
         ).onEach { it.start() }
         val finished = process.waitFor(timeoutMillis, TimeUnit.MILLISECONDS)

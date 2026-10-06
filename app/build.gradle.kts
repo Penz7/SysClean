@@ -29,8 +29,8 @@ android {
 
     defaultConfig {
         applicationId = "vn.sysclean"
-        versionCode = 7
-        versionName = "0.6.1"
+        versionCode = 8
+        versionName = "0.7.0"
     }
 
     androidResources {

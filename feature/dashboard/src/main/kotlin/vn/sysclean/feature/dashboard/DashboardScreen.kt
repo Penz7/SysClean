@@ -3,6 +3,8 @@ package vn.sysclean.feature.dashboard
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import vn.sysclean.core.privilege.startActivityWithFallback
+import androidx.compose.material.icons.outlined.PowerSettingsNew
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -96,6 +98,7 @@ internal fun DashboardScreen(
     onOpenTrash: () -> Unit,
     onOpenUnusedApps: () -> Unit,
     onOpenBloatware: () -> Unit,
+    onOpenShizukuSetup: () -> Unit,
     viewModel: DashboardViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
@@ -124,6 +127,9 @@ internal fun DashboardScreen(
         onOpenTrash = onOpenTrash,
         onOpenUnusedApps = onOpenUnusedApps,
         onOpenBloatware = onOpenBloatware,
+        onOpenShizuku = { viewModel.shizukuLaunchIntent()?.let { context.startActivityWithFallback(it, null) } },
+        onOpenShizukuSetup = onOpenShizukuSetup,
+        onForgetShizuku = viewModel::forgetShizuku,
     )
 }
 
@@ -142,6 +148,9 @@ internal fun DashboardContent(
     onOpenTrash: () -> Unit,
     onOpenUnusedApps: () -> Unit,
     onOpenBloatware: () -> Unit,
+    onOpenShizuku: () -> Unit = {},
+    onOpenShizukuSetup: () -> Unit = {},
+    onForgetShizuku: () -> Unit = {},
 ) {
     val spacing = SysCleanTheme.spacing
     // One confirmation for quick clean, reachable from both the scan card and the tips.
@@ -203,6 +212,9 @@ internal fun DashboardContent(
                         onAction = onOpenSettings,
                     )
                 }
+            }
+            if (state.access.shizukuStopped) {
+                item { ShizukuStoppedCard(onOpenShizuku, onOpenShizukuSetup, onForgetShizuku) }
             }
             item { QuickStats(state, onOpenMemory, onOpenBattery) }
             state.storage?.let { storage -> item { StorageCard(storage) } }
@@ -541,3 +553,24 @@ private fun AdvancedModeCard(
     }
 }
 
+
+/**
+ * Without root Shizuku stops at every restart, and the user rarely notices until a deep-clean
+ * feature quietly disappears. Shown only to people who had it working.
+ */
+@Composable
+private fun ShizukuStoppedCard(onOpenShizuku: () -> Unit, onOpenSetup: () -> Unit, onForget: () -> Unit) {
+    Column {
+        Banner(
+            icon = Icons.Outlined.PowerSettingsNew,
+            title = stringResource(R.string.dashboard_shizuku_stopped_title),
+            body = stringResource(R.string.dashboard_shizuku_stopped_body),
+            actionLabel = stringResource(R.string.dashboard_shizuku_stopped_action),
+            onAction = onOpenShizuku,
+        )
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+            TextButton(onClick = onOpenSetup) { Text(stringResource(R.string.dashboard_shizuku_stopped_guide)) }
+            TextButton(onClick = onForget) { Text(stringResource(R.string.dashboard_shizuku_stopped_forget)) }
+        }
+    }
+}

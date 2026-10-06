@@ -35,11 +35,15 @@ import vn.sysclean.feature.dashboard.dashboardScreen
 import vn.sysclean.feature.deviceinfo.DeviceInfoRoute
 import vn.sysclean.feature.deviceinfo.DeviceTab
 import vn.sysclean.feature.deviceinfo.deviceInfoScreen
+import vn.sysclean.feature.performance.BatteryRoute
 import vn.sysclean.feature.performance.RamRoute
+import vn.sysclean.feature.performance.batteryScreen
 import vn.sysclean.feature.performance.performanceScreen
 import vn.sysclean.feature.performance.ramScreen
 import vn.sysclean.feature.settings.SettingsRoute
+import vn.sysclean.feature.settings.ShizukuSetupRoute
 import vn.sysclean.feature.settings.WhitelistRoute
+import vn.sysclean.feature.settings.shizukuSetupScreen
 import vn.sysclean.feature.settings.settingsScreen
 import vn.sysclean.feature.settings.whitelistScreen
 import vn.sysclean.feature.trash.TrashRoute
@@ -100,12 +104,15 @@ fun SysCleanApp(
                 onOpenTrash = { navController.navigate(TrashRoute) },
                 onOpenUnusedApps = { navController.navigateToTopLevel(AppsRoute(filter = "UNUSED")) },
                 onOpenBloatware = { navController.navigate(BloatwareRoute) },
+                onOpenShizukuSetup = { navController.navigate(ShizukuSetupRoute) },
             )
             performanceScreen(
                 onOpenRam = { navController.navigate(RamRoute) },
+                onOpenBattery = { navController.navigate(BatteryRoute) },
                 onOpenSettings = { navController.navigateToTopLevel(SettingsRoute) },
             )
             ramScreen(onBack = navController::popBackStack)
+            batteryScreen(onBack = navController::popBackStack)
             deviceInfoScreen()
             appsScreen(
                 onOpenAppDetails = openAppDetails,
@@ -117,7 +124,9 @@ fun SysCleanApp(
                 onOpenTrash = { navController.navigate(TrashRoute) },
                 onOpenWhitelist = { navController.navigate(WhitelistRoute) },
                 onAddWidget = widgetRefresher::requestPin,
+                onOpenShizukuSetup = { navController.navigate(ShizukuSetupRoute) },
             )
+            shizukuSetupScreen(onBack = navController::popBackStack)
             cleanCategoryScreen(onBack = navController::popBackStack, onOpenAppDetails = openAppDetails)
             trashScreen(onBack = navController::popBackStack)
             whitelistScreen(onBack = navController::popBackStack)

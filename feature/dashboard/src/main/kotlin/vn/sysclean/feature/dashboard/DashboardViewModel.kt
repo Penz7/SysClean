@@ -61,7 +61,7 @@ data class DashboardUiState(
 class DashboardViewModel @Inject constructor(
     deviceInfoRepository: DeviceInfoRepository,
     healthRepository: HealthRepository,
-    accessRepository: AccessRepository,
+    private val accessRepository: AccessRepository,
     private val junkScanner: JunkScanner,
     private val junkCleaner: JunkCleaner,
     preferences: UserPreferencesRepository,
@@ -119,4 +119,9 @@ class DashboardViewModel @Inject constructor(
             group.category to group.items.filter { it.path !in remaining }
         }.filterValues { it.isNotEmpty() }
     }
+
+    fun shizukuLaunchIntent() = accessRepository.shizukuLaunchIntent()
+
+    /** "Don't remind me": the stopped-Shizuku card disappears until Shizuku works again. */
+    fun forgetShizuku() = accessRepository.forgetShizukuSetup()
 }

@@ -10,8 +10,17 @@ data object PerformanceRoute
 @Serializable
 data object RamRoute
 
-fun NavGraphBuilder.performanceScreen(onOpenRam: () -> Unit, onOpenSettings: () -> Unit) {
-    composable<PerformanceRoute> { PerformanceScreen(onOpenRam = onOpenRam, onOpenSettings = onOpenSettings) }
+@Serializable
+data object BatteryRoute
+
+fun NavGraphBuilder.performanceScreen(onOpenRam: () -> Unit, onOpenBattery: () -> Unit, onOpenSettings: () -> Unit) {
+    composable<PerformanceRoute> {
+        PerformanceScreen(onOpenRam = onOpenRam, onOpenBattery = onOpenBattery, onOpenSettings = onOpenSettings)
+    }
+}
+
+fun NavGraphBuilder.batteryScreen(onBack: () -> Unit) {
+    composable<BatteryRoute> { BatteryScreen(onBack = onBack) }
 }
 
 fun NavGraphBuilder.ramScreen(onBack: () -> Unit) {

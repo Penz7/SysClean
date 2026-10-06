@@ -18,7 +18,6 @@ import vn.sysclean.core.data.repository.UserPreferencesRepository
 import vn.sysclean.core.data.repository.WhitelistRepository
 import vn.sysclean.core.model.AccessState
 import vn.sysclean.core.privilege.AccessRepository
-import vn.sysclean.core.privilege.ShizukuQuirk
 import javax.inject.Inject
 
 @HiltViewModel
@@ -40,8 +39,6 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch { preferences.setTrashRetentionDays(days) }
     }
 
-    val shizukuQuirk: ShizukuQuirk? = accessRepository.shizukuQuirk
-    val hasWirelessDebugging: Boolean = accessRepository.hasWirelessDebugging
 
     val needsLegacyStoragePermission: Boolean = accessRepository.needsLegacyStoragePermission
     val legacyStoragePermissions: Array<String> = accessRepository.legacyStoragePermissions
@@ -55,9 +52,6 @@ class SettingsViewModel @Inject constructor(
     fun shizukuLaunchIntent(): Intent? = accessRepository.shizukuLaunchIntent()
 
     fun shizukuInstallIntents(): Pair<Intent, Intent> = accessRepository.shizukuInstallIntents()
-
-    fun developerOptionsIntents(): Pair<Intent, Intent> =
-        accessRepository.developerOptionsIntent() to accessRepository.aboutPhoneIntent()
 
     fun requestShizukuPermission() = accessRepository.requestShizukuPermission()
 

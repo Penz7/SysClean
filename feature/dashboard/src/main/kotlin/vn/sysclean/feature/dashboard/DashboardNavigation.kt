@@ -16,6 +16,7 @@ fun NavGraphBuilder.dashboardScreen(
     onOpenTrash: () -> Unit,
     onOpenUnusedApps: () -> Unit,
     onOpenBloatware: () -> Unit,
+    onOpenShizukuSetup: () -> Unit,
 ) {
     composable<DashboardRoute> {
         DashboardScreen(
@@ -26,6 +27,7 @@ fun NavGraphBuilder.dashboardScreen(
             onOpenTrash = onOpenTrash,
             onOpenUnusedApps = onOpenUnusedApps,
             onOpenBloatware = onOpenBloatware,
+            onOpenShizukuSetup = onOpenShizukuSetup,
         )
     }
 }

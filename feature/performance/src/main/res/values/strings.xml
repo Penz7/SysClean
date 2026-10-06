@@ -120,4 +120,29 @@
     <string name="ram_idle_preload">Pre-installed, not opened for a month, still running. Opening it later works as usual.</string>
     <string name="ram_state_asleep">Deep sleep</string>
     <string name="ram_state_disabled">Disabled</string>
+    <!-- Battery drain -->
+    <string name="battery_title">Battery drain</string>
+    <string name="battery_entry_desc">See which apps wake the phone and use the battery most since the last full charge.</string>
+    <string name="battery_unavailable">Android did not return battery statistics. Make sure Shizuku (or root mode) is on, then open this screen again.</string>
+    <string name="battery_since_charge">Since the last full charge</string>
+    <string name="battery_on_battery">On battery</string>
+    <string name="battery_screen_off">Screen off</string>
+    <string name="battery_used">Estimated use</string>
+    <string name="battery_used_value">%1$s of %2$d mAh</string>
+    <string name="battery_duration">%1$d h %2$d min</string>
+    <string name="battery_short_title">Not much data yet</string>
+    <string name="battery_short_body">Android counts from the last full charge, and the phone has been on battery for less than an hour. Use it unplugged for a few hours and come back for a clearer picture.</string>
+    <string name="battery_flagged">Draining in the background</string>
+    <string name="battery_flagged_hint">These apps wake the phone, keep it awake or run while you are not using them. Deep sleep lets them run only when you open them.</string>
+    <string name="battery_flagged_none">No app is misbehaving in the background. Battery is going where you use it.</string>
+    <string name="battery_others">Most battery used</string>
+    <string name="battery_others_hint">Mostly while on screen: that is normal for apps you use.</string>
+    <string name="battery_share">%1$s mAh · %2$s%%</string>
+    <string name="battery_share_activity">%1$s%% of app activity</string>
+    <string name="battery_sign_wakes">Wakes the phone %1$d×/hour</string>
+    <string name="battery_sign_awake">Keeps it awake %1$s min/hour</string>
+    <string name="battery_sign_background">Runs in the background, rarely opened</string>
+    <string name="battery_details">Details</string>
+    <string name="battery_system">Android itself (radio, system services, sensors): %1$s mAh, not counting the screen.</string>
+    <string name="battery_footnote">Figures are Android\'s own estimates since the last full charge. System parts doing their job are listed without warnings.</string>
 </resources>

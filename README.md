@@ -1,6 +1,6 @@
 # SysClean
 
-Ứng dụng phân tích và dọn dẹp hệ thống cho Android. **Phiên bản 0.6.1: phân tích + dọn dẹp + dọn sâu (Shizuku/Root) + widget + tối ưu hiệu năng & RAM, chạy như nhau trên mọi hãng.**
+Ứng dụng phân tích và dọn dẹp hệ thống cho Android. **Phiên bản 0.7.0: phân tích + dọn dẹp + dọn sâu (Shizuku/Root) + widget + tối ưu hiệu năng & RAM, chạy như nhau trên mọi hãng.**
 
 - minSdk 26 (Android 8.0) · targetSdk 36 · Kotlin 2.2 · Jetpack Compose + Material 3 · Hilt
 - Ngôn ngữ: Tiếng Anh, Tiếng Việt (mặc định theo hệ thống, đổi được trong Cài đặt)
@@ -99,6 +99,13 @@ tiến trình *cached* — app đã đóng, không dừng app đang mở; đo tr
 dùng 2 tuần, (tùy chọn) hiệu ứng 0,5x. Kết quả hiện "RAM đang dùng X% → Y%" theo cùng cách tính với dashboard/widget, đo
 sau 3 s cho kernel trả trang; nói rõ Android sẽ dần nạp lại (bình thường) và cách giảm lâu dài (ngủ sâu). Lưu số đo trước khi tối ưu và reset `gfxinfo` để so sánh với lúc dùng thật sau đó.
 
+**App hao pin** (Shizuku/Root): đọc `dumpsys batterystats --checkin` (định dạng CSV ổn định của AOSP, chạy như nhau
+trên mọi hãng), từ lần sạc đầy gần nhất: mAh ước tính, số lần đánh thức (`wua`), wakelock nền (`awl`), CPU, thời gian
+chạy nền (`st`). Gắn cờ *đánh thức ≥ 6 lần/giờ*, *giữ máy thức ≥ 2% thời gian*, *chạy nền ≥ 30% mà hiếm khi mở* — chỉ
+cho app người dùng thao tác được và chiếm ≥ 1% pin của các app; thành phần hệ thống chỉ liệt kê. Hành động: Ngủ sâu
+(hoàn tác được), Tắt dịch vụ tùy chọn, hoặc Chi tiết. Dịch vụ đặc quyền chỉ cho phép đúng `dumpsys batterystats
+--checkin` (không bao giờ `--reset`) và lọc bỏ các dòng không dùng trước khi qua Binder (182 KB → 30 KB sau 3 giờ).
+
 **Quản lý RAM:** bản đồ RAM theo app (Hệ thống / Đang dùng / Chạy nền / Bộ nhớ đệm).
 - *Ngủ sâu* app người dùng: `appops RUN_ANY_IN_BACKGROUND ignore` + standby `restricted` + force-stop; *Đánh thức* để hoàn tác.
 - *Tắt* dịch vụ thường trực tùy chọn đã biết (App Google, Customization Service, Routines, Bixby voice…), ghi rõ mất gì.
@@ -108,6 +115,12 @@ sau 3 s cho kernel trả trang; nói rõ Android sẽ dần nạp lại (bình t
   Màn "Ứng dụng cài sẵn" cũng có mục này (chỉ *Tắt*, không *Gỡ*), và mục khôi phục liệt kê mọi app cài sẵn đang bị tắt.
 - Hướng dẫn Shizuku theo hãng (`ShizukuQuirk`): Xiaomi (Gỡ lỗi USB – bảo mật), OPPO/realme/OnePlus (Tắt giám sát quyền),
   Meizu (Bảo vệ thanh toán Flyme); Android 8–10 chỉ hướng dẫn cách dùng máy tính.
+- **Thiết lập Shizuku từng bước** (Cài đặt → "Thiết lập từng bước"): 6 bước tự đánh dấu theo trạng thái thật của máy
+  (đã cài Shizuku, Tùy chọn nhà phát triển, Wi-Fi, Gỡ lỗi không dây — `adb_wifi_enabled`, Shizuku chạy, đã cho phép),
+  mỗi bước một nút mở đúng màn hình (Gỡ lỗi không dây được cuộn tới qua `:settings:fragment_args_key`). Đường dẫn
+  "Số hiệu bản tạo" riêng cho Samsung/Xiaomi; Android 8–10 đi đường máy tính. Logic bước là hàm thuần có unit test.
+- **Nhắc khi Shizuku dừng**: người đã từng dùng Shizuku mà nay Shizuku không chạy (thường do khởi động lại máy) thấy thẻ
+  trên Tổng quan: Mở Shizuku / Hướng dẫn / Không nhắc nữa. Trình thiết lập rút gọn còn "mở Shizuku → Bắt đầu".
 - Hướng dẫn ghép nối nhấn mạnh chỗ người dùng hay kẹt (đã kiểm chứng trên Galaxy A25): mã ghép nối hết hiệu lực khi hộp
   thoại đóng, nên phải giữ hộp thoại mở khi nhập mã vào thông báo Shizuku (gợi ý chia đôi màn hình). Sau khi cài lại
   SysClean, cần dừng/bật lại Shizuku (server cũ giữ UID cũ, `attachApplication` lỗi NPE — gặp trên Xiaomi).

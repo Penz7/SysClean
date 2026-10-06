@@ -12,7 +12,13 @@ data class AccessState(
     val rootDetected: Boolean,
     /** The user turned root mode on and `su` granted it. */
     val rootMode: Boolean = false,
+    /** Shizuku has worked for SysClean before, so "not running" now means it was stopped (usually a reboot). */
+    val shizukuWasSetUp: Boolean = false,
 ) {
+    /** Shizuku used to work but is not running now: without root it stops at every reboot. */
+    val shizukuStopped: Boolean
+        get() = shizukuWasSetUp && shizuku == ShizukuState.NOT_RUNNING && !rootMode
+
     /** The mode features actually run in; Shizuku wins when both are available. */
     val activeLevel: AccessLevel
         get() = when {
@@ -40,3 +46,15 @@ data class AccessState(
         )
     }
 }
+
+/**
+ * The phone-side switches Shizuku needs, read without any special permission so the setup
+ * guide can tick steps off by itself.
+ */
+data class ShizukuSetupStatus(
+    val developerOptions: Boolean,
+    /** Null when this Android version does not let apps read it. */
+    val wirelessDebugging: Boolean?,
+    val wifiConnected: Boolean,
+    val usbDebugging: Boolean,
+)

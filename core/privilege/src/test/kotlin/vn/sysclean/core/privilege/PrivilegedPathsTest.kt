@@ -46,12 +46,28 @@ class PrivilegedPathsTest {
         assertTrue(PrivilegedPaths.isCommandAllowed(listOf("cat", "/proc/pressure/memory")))
         assertTrue(PrivilegedPaths.isCommandAllowed(listOf("svc", "power", "reboot")))
 
+        assertTrue(PrivilegedPaths.isCommandAllowed(listOf("dumpsys", "batterystats", "--checkin")))
         assertFalse(PrivilegedPaths.isCommandAllowed(listOf("dumpsys", "batterystats", "--reset")))
+        assertFalse(PrivilegedPaths.isCommandAllowed(listOf("dumpsys", "batterystats", "--checkin", "--reset")))
+        assertFalse(PrivilegedPaths.isCommandAllowed(listOf("dumpsys", "batterystats")))
         assertFalse(PrivilegedPaths.isCommandAllowed(listOf("sm", "format", "private")))
         assertFalse(PrivilegedPaths.isCommandAllowed(listOf("cat", "/data/system/packages.xml")))
         assertFalse(PrivilegedPaths.isCommandAllowed(listOf("svc", "power", "shutdown")))
         assertFalse(PrivilegedPaths.isCommandAllowed(listOf("svc", "wifi", "disable")))
         assertFalse(PrivilegedPaths.isCommandAllowed(listOf("reboot")))
         assertFalse(PrivilegedPaths.isCommandAllowed(emptyList()))
+    }
+
+    @Test
+    fun batteryDumpKeepsOnlyTheRowsSysCleanReads() {
+        val checkin = listOf("dumpsys", "batterystats", "--checkin")
+        listOf("9,0,i,uid,10100,com.example", "9,0,l,bt,0,1,2", "9,10100,l,pwi,uid,1.0", "9,10100,l,awl,1,2").forEach {
+            assertTrue(it, PrivilegedPaths.keepsOutputLine(checkin, it))
+        }
+        listOf("9,10100,l,wl,sync,0,f", "9,10100,l,pr,com.example,1", "9,0,i,vers,36", "").forEach {
+            assertFalse(it, PrivilegedPaths.keepsOutputLine(checkin, it))
+        }
+        // Every other command is passed through untouched.
+        assertTrue(PrivilegedPaths.keepsOutputLine(listOf("dumpsys", "meminfo"), "9,10100,l,wl,sync"))
     }
 }

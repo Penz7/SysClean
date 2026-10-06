@@ -96,7 +96,7 @@ class RamManager @Inject constructor(
     }
 
     /** All packages barred from running in the background, in one call. */
-    private suspend fun deepSleepingPackages(): Set<String> = runCatching {
+    suspend fun deepSleepingPackages(): Set<String> = runCatching {
         shell.run("cmd", "appops", "query-op", "RUN_ANY_IN_BACKGROUND", "ignore").output
             .lineSequence().map { it.trim() }.filter { it.isNotEmpty() }.toSet()
     }.getOrDefault(emptySet())

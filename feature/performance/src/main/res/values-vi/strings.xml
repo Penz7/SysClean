@@ -119,4 +119,29 @@
     <string name="ram_idle_preload">Cài sẵn, hơn 1 tháng không mở nhưng vẫn chạy. Sau này mở lại vẫn dùng bình thường.</string>
     <string name="ram_state_asleep">Đang ngủ sâu</string>
     <string name="ram_state_disabled">Đã tắt</string>
+    <!-- Battery drain -->
+    <string name="battery_title">App hao pin</string>
+    <string name="battery_entry_desc">Xem app nào đánh thức máy và dùng pin nhiều nhất từ lần sạc đầy gần nhất.</string>
+    <string name="battery_unavailable">Android không trả về thống kê pin. Hãy kiểm tra Shizuku (hoặc chế độ root) đang bật rồi mở lại màn hình này.</string>
+    <string name="battery_since_charge">Từ lần sạc đầy gần nhất</string>
+    <string name="battery_on_battery">Dùng pin</string>
+    <string name="battery_screen_off">Tắt màn hình</string>
+    <string name="battery_used">Ước tính đã dùng</string>
+    <string name="battery_used_value">%1$s / %2$d mAh</string>
+    <string name="battery_duration">%1$d giờ %2$d phút</string>
+    <string name="battery_short_title">Chưa đủ dữ liệu</string>
+    <string name="battery_short_body">Android tính từ lần sạc đầy gần nhất và máy mới dùng pin chưa tới 1 giờ. Hãy dùng máy không cắm sạc vài giờ rồi xem lại để có số liệu rõ hơn.</string>
+    <string name="battery_flagged">Hao pin khi chạy ngầm</string>
+    <string name="battery_flagged_hint">Các app này đánh thức máy, giữ máy thức hoặc chạy khi bạn không dùng. Ngủ sâu giúp chúng chỉ chạy khi bạn mở.</string>
+    <string name="battery_flagged_none">Không có app nào chạy ngầm bất thường. Pin đang được dùng cho những gì bạn mở.</string>
+    <string name="battery_others">Dùng pin nhiều nhất</string>
+    <string name="battery_others_hint">Chủ yếu lúc đang hiện trên màn hình: bình thường với app bạn hay dùng.</string>
+    <string name="battery_share">%1$s mAh · %2$s%%</string>
+    <string name="battery_share_activity">%1$s%% hoạt động của app</string>
+    <string name="battery_sign_wakes">Đánh thức máy %1$d lần/giờ</string>
+    <string name="battery_sign_awake">Giữ máy thức %1$s phút/giờ</string>
+    <string name="battery_sign_background">Chạy ngầm, hiếm khi được mở</string>
+    <string name="battery_details">Chi tiết</string>
+    <string name="battery_system">Bản thân Android (sóng điện thoại, dịch vụ hệ thống, cảm biến): %1$s mAh, chưa tính màn hình.</string>
+    <string name="battery_footnote">Số liệu do Android tự ước tính từ lần sạc đầy gần nhất. Thành phần hệ thống làm đúng việc của nó được liệt kê nhưng không bị cảnh báo.</string>
 </resources>

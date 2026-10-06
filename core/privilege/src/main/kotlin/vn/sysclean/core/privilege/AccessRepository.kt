@@ -5,6 +5,8 @@ import android.app.AppOpsManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
@@ -25,6 +27,7 @@ import vn.sysclean.core.common.di.ApplicationScope
 import vn.sysclean.core.common.di.Dispatcher
 import vn.sysclean.core.common.di.SysCleanDispatcher
 import vn.sysclean.core.model.AccessState
+import vn.sysclean.core.model.ShizukuSetupStatus
 import vn.sysclean.core.model.ShizukuState
 import vn.sysclean.core.privilege.shell.ProcessRunner
 import javax.inject.Inject
@@ -67,14 +70,47 @@ class AccessRepository @Inject constructor(
 
     /** Synchronous variant for callers already off the main thread that need the fresh state. */
     fun refreshNow() {
+        val shizuku = shizukuState()
+        if (shizuku == ShizukuState.READY) prefs.edit().putBoolean(KEY_SHIZUKU_SET_UP, true).apply()
         _state.value = AccessState(
             allFilesAccess = hasAllFilesAccess(),
             usageAccess = hasUsageAccess(),
-            shizuku = shizukuState(),
+            shizuku = shizuku,
             rootDetected = rootIndicators().isNotEmpty(),
             rootMode = prefs.getBoolean(KEY_ROOT_MODE, false),
+            shizukuWasSetUp = prefs.getBoolean(KEY_SHIZUKU_SET_UP, false),
         )
     }
+
+    /** "Don't remind me": stops the stopped-Shizuku reminder until Shizuku works again. */
+    fun forgetShizukuSetup() {
+        prefs.edit().putBoolean(KEY_SHIZUKU_SET_UP, false).apply()
+        refresh()
+    }
+
+    /** What the setup guide checks off; all plain reads, no permission needed. */
+    fun setupStatus(): ShizukuSetupStatus {
+        val resolver = context.contentResolver
+        return ShizukuSetupStatus(
+            developerOptions = Settings.Global.getInt(resolver, Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) == 1,
+            // Hidden setting; readable on the versions tested, guarded for the rest.
+            wirelessDebugging = runCatching { Settings.Global.getInt(resolver, ADB_WIFI_ENABLED) == 1 }.getOrNull(),
+            wifiConnected = runCatching {
+                val connectivity = context.getSystemService(ConnectivityManager::class.java)
+                connectivity.getNetworkCapabilities(connectivity.activeNetwork)
+                    ?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) == true
+            }.getOrDefault(false),
+            usbDebugging = Settings.Global.getInt(resolver, Settings.Global.ADB_ENABLED, 0) == 1,
+        )
+    }
+
+    /**
+     * Developer options scrolled to "Wireless debugging": the extra is what Settings itself
+     * uses for search results, and ROMs that ignore it simply open the page at the top.
+     */
+    fun wirelessDebuggingIntent(): Intent = Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)
+        .putExtra(EXTRA_FRAGMENT_ARG_KEY, "toggle_adb_wireless")
+        .putExtra(EXTRA_SHOW_FRAGMENT_ARGUMENTS, android.os.Bundle().apply { putString(EXTRA_FRAGMENT_ARG_KEY, "toggle_adb_wireless") })
 
     /**
      * The only place that calls `su` on its own: when the user taps "Turn on root mode".
@@ -206,6 +242,10 @@ class AccessRepository @Inject constructor(
         const val SHIZUKU_DOWNLOAD_URL = "https://shizuku.rikka.app/download/"
         private const val SHIZUKU_REQUEST_CODE = 1001
         private const val KEY_ROOT_MODE = "root_mode"
+        private const val KEY_SHIZUKU_SET_UP = "shizuku_set_up"
+        private const val ADB_WIFI_ENABLED = "adb_wifi_enabled"
+        private const val EXTRA_FRAGMENT_ARG_KEY = ":settings:fragment_args_key"
+        private const val EXTRA_SHOW_FRAGMENT_ARGUMENTS = ":settings:show_fragment_args"
 
         /** Long enough for the user to read and answer the superuser prompt. */
         private const val ROOT_PROMPT_TIMEOUT = 60_000L

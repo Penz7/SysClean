@@ -89,7 +89,7 @@ internal class ShizukuPrivilegedShell @Inject constructor(
 
     private companion object {
         /** Bump whenever PrivilegedService changes so Shizuku replaces a running old copy. */
-        const val SERVICE_VERSION = 2
+        const val SERVICE_VERSION = 3
         const val BIND_TIMEOUT = 10_000L
     }
 }
