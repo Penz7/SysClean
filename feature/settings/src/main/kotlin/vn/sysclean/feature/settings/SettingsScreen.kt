@@ -1,5 +1,7 @@
 package vn.sysclean.feature.settings
 
+import android.content.Intent
+import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
@@ -14,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -102,6 +105,20 @@ internal fun SettingsScreen(
     val legacyLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
         viewModel.refresh()
     }
+    // Google Play's "prominent disclosure": say what is accessed and why, before the system screen.
+    var disclosure by rememberSaveable { mutableStateOf<Disclosure?>(null) }
+    val grantAllFiles = {
+        if (viewModel.needsLegacyStoragePermission) {
+            legacyLauncher.launch(viewModel.legacyStoragePermissions)
+        } else {
+            val (primary, fallback) = viewModel.allFilesAccessIntents()
+            context.startActivityWithFallback(primary, fallback)
+        }
+    }
+    val grantUsage = {
+        val (primary, fallback) = viewModel.usageAccessIntents()
+        context.startActivityWithFallback(primary, fallback)
+    }
 
     Scaffold(
         topBar = { TopAppBar(title = { Text(stringResource(R.string.settings_title)) }) },
@@ -126,24 +143,14 @@ internal fun SettingsScreen(
                         ),
                         description = stringResource(R.string.settings_all_files_desc),
                         granted = access.allFilesAccess,
-                        onGrant = {
-                            if (viewModel.needsLegacyStoragePermission) {
-                                legacyLauncher.launch(viewModel.legacyStoragePermissions)
-                            } else {
-                                val (primary, fallback) = viewModel.allFilesAccessIntents()
-                                context.startActivityWithFallback(primary, fallback)
-                            }
-                        },
+                        onGrant = { disclosure = Disclosure.ALL_FILES },
                     )
                     HorizontalDivider()
                     PermissionRow(
                         title = stringResource(R.string.settings_usage),
                         description = stringResource(R.string.settings_usage_desc),
                         granted = access.usageAccess,
-                        onGrant = {
-                            val (primary, fallback) = viewModel.usageAccessIntents()
-                            context.startActivityWithFallback(primary, fallback)
-                        },
+                        onGrant = { disclosure = Disclosure.USAGE },
                     )
                 }
             }
@@ -192,9 +199,29 @@ internal fun SettingsScreen(
                         runCatching { context.packageManager.getPackageInfo(context.packageName, 0).versionName }.getOrNull()
                     }
                     InfoRow(stringResource(R.string.settings_version), version)
+                    // Opened in the browser: SysClean itself has no internet permission.
+                    TextButton(onClick = { context.startActivityWithFallback(Intent(Intent.ACTION_VIEW, Uri.parse(PRIVACY_POLICY_URL)), null) }) {
+                        Text(stringResource(R.string.settings_privacy_policy))
+                    }
+                    TextButton(onClick = { context.startActivityWithFallback(Intent(Intent.ACTION_VIEW, Uri.parse(SOURCE_URL)), null) }) {
+                        Text(stringResource(R.string.settings_source_code))
+                    }
                 }
             }
         }
+    }
+    disclosure?.let { shown ->
+        PermissionDisclosureDialog(
+            disclosure = shown,
+            onContinue = {
+                disclosure = null
+                when (shown) {
+                    Disclosure.ALL_FILES -> grantAllFiles()
+                    Disclosure.USAGE -> grantUsage()
+                }
+            },
+            onDismiss = { disclosure = null },
+        )
     }
 }
 
@@ -421,3 +448,29 @@ private fun LanguageCard() {
         }
     }
 }
+
+internal enum class Disclosure { ALL_FILES, USAGE }
+
+@Composable
+private fun PermissionDisclosureDialog(disclosure: Disclosure, onContinue: () -> Unit, onDismiss: () -> Unit) {
+    val (title, body) = when (disclosure) {
+        Disclosure.ALL_FILES -> R.string.disclosure_files_title to R.string.disclosure_files_body
+        Disclosure.USAGE -> R.string.disclosure_usage_title to R.string.disclosure_usage_body
+    }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        icon = { Icon(Icons.Outlined.VerifiedUser, contentDescription = null) },
+        title = { Text(stringResource(title)) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(SysCleanTheme.spacing.sm)) {
+                Text(stringResource(body), style = MaterialTheme.typography.bodyMedium)
+                Text(stringResource(R.string.disclosure_on_device), style = MaterialTheme.typography.bodyMedium)
+            }
+        },
+        confirmButton = { TextButton(onClick = onContinue) { Text(stringResource(R.string.disclosure_continue)) } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text(stringResource(R.string.disclosure_not_now)) } },
+    )
+}
+
+private const val PRIVACY_POLICY_URL = "https://penz7.github.io/SysClean/privacy-policy.html"
+private const val SOURCE_URL = "https://github.com/Penz7/SysClean"

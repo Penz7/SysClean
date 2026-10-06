@@ -22,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import vn.sysclean.core.ui.displayLabel
 import vn.sysclean.core.common.format.formatBytes
 import vn.sysclean.core.common.format.formatDuration
 import vn.sysclean.core.common.format.formatFrequency
@@ -228,7 +229,7 @@ internal fun LazyListScope.displayTab(display: DisplayInfo) {
 
 internal fun LazyListScope.storageTab(storage: StorageInfo) {
     items(storage.volumes) { volume ->
-        SectionCard(title = volume.label, icon = Icons.Outlined.SdStorage) {
+        SectionCard(title = volume.displayLabel(), icon = Icons.Outlined.SdStorage) {
             LabeledUsage(
                 title = stringResource(R.string.device_storage_used),
                 detail = fmt("%.0f%%", volume.usedFraction * 100),

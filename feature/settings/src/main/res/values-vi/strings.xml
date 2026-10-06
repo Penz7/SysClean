@@ -127,4 +127,14 @@
     <string name="setup_allow">Cho phép SysClean</string>
     <string name="setup_allow_body">Shizuku đã chạy. Bấm nút bên dưới và chọn \"Cho phép\" trong hộp thoại của Shizuku.</string>
     <string name="setup_after_reboot">Sau mỗi lần khởi động lại máy, Shizuku sẽ dừng. Bật lại Gỡ lỗi không dây nếu nó đã tắt rồi bấm \"Bắt đầu\" trong Shizuku: không cần ghép nối lại.</string>
+    <!-- Prominent disclosure shown before each sensitive permission -->
+    <string name="disclosure_files_title">Quyền truy cập mọi tệp</string>
+    <string name="disclosure_files_body">SysClean đọc tên, dung lượng và ngày của các tệp trong bộ nhớ dùng chung để tìm file rác (bộ nhớ đệm, phần sót lại của app đã gỡ, thư mục trống, ảnh trùng và ảnh mờ, tệp lớn) và chỉ xóa những gì bạn chọn. Tệp bị xóa được chuyển vào thùng rác của SysClean trước nên có thể khôi phục.</string>
+    <string name="disclosure_usage_title">Quyền truy cập dữ liệu sử dụng</string>
+    <string name="disclosure_usage_body">SysClean đọc dung lượng của từng ứng dụng và lần cuối bạn mở chúng, để hiển thị kích thước app, tìm app bạn không còn dùng và gợi ý app nên cho ngủ sâu. SysClean không thấy bạn làm gì bên trong các app.</string>
+    <string name="disclosure_on_device">Mọi thứ chỉ nằm trên điện thoại này: SysClean không có quyền truy cập Internet và không gửi gì ra ngoài. Bạn có thể tắt quyền này bất cứ lúc nào trong cài đặt Android.</string>
+    <string name="disclosure_continue">Tiếp tục</string>
+    <string name="disclosure_not_now">Để sau</string>
+    <string name="settings_privacy_policy">Chính sách quyền riêng tư</string>
+    <string name="settings_source_code">Mã nguồn trên GitHub</string>
 </resources>

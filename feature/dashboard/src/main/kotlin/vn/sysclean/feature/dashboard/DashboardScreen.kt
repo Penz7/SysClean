@@ -3,6 +3,7 @@ package vn.sysclean.feature.dashboard
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import vn.sysclean.core.ui.displayLabel
 import vn.sysclean.core.privilege.startActivityWithFallback
 import androidx.compose.material.icons.outlined.PowerSettingsNew
 import androidx.compose.foundation.layout.Column
@@ -324,7 +325,7 @@ private fun StorageCard(storage: StorageInfo) {
     SectionCard(title = stringResource(R.string.dashboard_storage), icon = Icons.Outlined.Storage) {
         storage.volumes.forEach { volume ->
             LabeledUsage(
-                title = volume.label,
+                title = volume.displayLabel(),
                 detail = usedOfTotal(formatBytes(volume.usedBytes), formatBytes(volume.totalBytes)),
                 fraction = volume.usedFraction,
             )

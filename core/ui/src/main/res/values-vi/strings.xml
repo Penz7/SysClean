@@ -80,4 +80,5 @@
     <plurals name="ui_items">
         <item quantity="other">%d mục</item>
     </plurals>
+    <string name="storage_internal">Bộ nhớ trong</string>
 </resources>

@@ -23,6 +23,7 @@ import vn.sysclean.core.model.BatteryStatus
 import vn.sysclean.core.model.JunkCategory
 import vn.sysclean.core.model.JunkNote
 import vn.sysclean.core.model.PlugType
+import vn.sysclean.core.model.StorageVolumeInfo
 import vn.sysclean.core.model.ThermalStatus
 import java.util.concurrent.TimeUnit
 
@@ -179,3 +180,12 @@ fun expiresLabel(expiresAt: Long, now: Long = System.currentTimeMillis()): Strin
     val days = ((expiresAt - now + dayMillis - 1) / dayMillis).toInt()
     return if (days <= 0) stringResource(R.string.ui_expires_today) else pluralStringResource(R.plurals.ui_expires_in, days, days)
 }
+
+/**
+ * The phone's own storage in the app's language. Android names volumes in the system
+ * language, which differs from the app's when the user picked another one in SysClean.
+ * SD cards keep the name Android gives them (often the card's brand).
+ */
+@Composable
+fun StorageVolumeInfo.displayLabel(): String =
+    if (isPrimary) stringResource(R.string.storage_internal) else label

@@ -128,4 +128,14 @@
     <string name="setup_allow">Allow SysClean</string>
     <string name="setup_allow_body">Shizuku is running. Tap below and choose \"Allow\" in the Shizuku dialog.</string>
     <string name="setup_after_reboot">After a restart Shizuku stops. Turn Wireless debugging back on if it went off, then tap \"Start\" in Shizuku: no need to pair again.</string>
+    <!-- Prominent disclosure shown before each sensitive permission -->
+    <string name="disclosure_files_title">Access to all files</string>
+    <string name="disclosure_files_body">SysClean reads the names, sizes and dates of the files in your shared storage to find junk (caches, leftovers of uninstalled apps, empty folders, duplicate and blurry photos, large files) and deletes only what you choose. Deleted files go to SysClean\'s recycle bin first, so they can be restored.</string>
+    <string name="disclosure_usage_title">Usage access</string>
+    <string name="disclosure_usage_body">SysClean reads how much space each app uses and when you last opened it, to show app sizes, find apps you no longer use and suggest which ones to put to sleep. It does not see what you do inside apps.</string>
+    <string name="disclosure_on_device">Everything stays on this phone: SysClean has no internet access and sends nothing anywhere. You can turn this off at any time in Android settings.</string>
+    <string name="disclosure_continue">Continue</string>
+    <string name="disclosure_not_now">Not now</string>
+    <string name="settings_privacy_policy">Privacy policy</string>
+    <string name="settings_source_code">Source code on GitHub</string>
 </resources>
