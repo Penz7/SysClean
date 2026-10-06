@@ -3,8 +3,8 @@
 ## App name (max 30)
 SysClean: Phone Cleaner
 
-## Short description (max 80)
-Clean junk, find battery drain and free RAM. Honest numbers, nothing leaves.
+## Short description (max 80) — no price/promo words such as "free": Play flags them
+Clean junk, find battery drain and reclaim RAM. Honest numbers, nothing leaves.
 
 ## Full description (max 4000)
 SysClean checks your phone's health and cleans it entirely on the device. It has no internet permission, no ads and no tracking: nothing you have ever leaves your phone.
@@ -21,13 +21,13 @@ CLEANING
 • Uninstall apps you no longer use, and see which pre-installed apps you never open.
 
 SPEED AND BATTERY
-• Diagnosis of what makes a phone feel slow: free storage, memory pressure, battery saver, accessibility services running all the time, temperature, uptime.
+• Diagnosis of what makes a phone feel slow: available storage, memory pressure, battery saver, accessibility services running all the time, temperature, uptime.
 • Battery drain: which apps wake the phone, keep it awake or run in the background while you never open them, since the last full charge.
 • One-tap optimisation with the result measured before and after, not claimed.
 • RAM manager: see which apps hold memory all the time and put the ones you do not use to deep sleep. Every step can be undone.
 
 ADVANCED MODE (OPTIONAL)
-With the free Shizuku app (no root needed) or a rooted phone, SysClean can also clean Android/data and app caches, compile apps like Android does overnight, trim storage, read battery and memory statistics, and disable pre-installed apps you choose. A step-by-step guide sets Shizuku up and ticks each step off by itself.
+With the Shizuku app (no root needed) or a rooted phone, SysClean can also clean Android/data and app caches, compile apps like Android does overnight, trim storage, read battery and memory statistics, and disable pre-installed apps you choose. A step-by-step guide sets Shizuku up and ticks each step off by itself.
 
 WORKS ON EVERY BRAND
 Samsung, Xiaomi, OPPO, vivo, realme, OnePlus, Google Pixel and more, Android 8 and newer. Suggestions are based on how you use your phone, not on a list for one brand.

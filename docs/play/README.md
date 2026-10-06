@@ -8,7 +8,8 @@ Mọi thứ cần để đưa SysClean lên Google Play, theo thứ tự làm.
 | `declarations.md` | Khai báo quyền nhạy cảm, Data safety, phân loại nội dung, đối tượng, ghi chú cho reviewer, kịch bản video |
 | `graphics/icon-512.png` | Biểu tượng 512×512 |
 | `graphics/feature-graphic-en.png`, `-vi.png` | Ảnh nổi bật 1024×500 |
-| `screenshots/` | Ảnh chụp 1080×2128 (tỉ lệ ≤ 2:1), tiếng Anh và tiếng Việt, không chứa dữ liệu cá nhân |
+| `screenshots/` | Ảnh chụp 1080×1920 (đúng 9:16 như Play yêu cầu), tiếng Anh và tiếng Việt, không chứa dữ liệu cá nhân |
+| `videos/query-all-packages.mp4` | Video demo cho khai báo QUERY_ALL_PACKAGES (Play bắt buộc) |
 | `../privacy-policy.html` | Chính sách quyền riêng tư (song ngữ), đăng qua GitHub Pages |
 
 Bản build: `./gradlew bundleRelease` → `app/build/outputs/bundle/release/app-release.aab` (ký bằng `keystore/`, không có trong git).

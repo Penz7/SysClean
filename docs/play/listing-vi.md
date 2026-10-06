@@ -27,7 +27,7 @@ TỐC ĐỘ VÀ PIN
 • Quản lý RAM: xem app nào giữ RAM thường xuyên và cho app bạn không dùng ngủ sâu. Mọi bước đều hoàn tác được.
 
 CHẾ ĐỘ NÂNG CAO (TÙY CHỌN)
-Với ứng dụng Shizuku miễn phí (không cần root) hoặc máy đã root, SysClean dọn thêm được Android/data và bộ nhớ đệm của app, biên dịch app như Android làm vào ban đêm, TRIM bộ nhớ, đọc thống kê pin và RAM, tắt app cài sẵn mà bạn chọn. Trình hướng dẫn từng bước giúp cài Shizuku và tự đánh dấu từng bước khi xong.
+Với ứng dụng Shizuku (không cần root) hoặc máy đã root, SysClean dọn thêm được Android/data và bộ nhớ đệm của app, biên dịch app như Android làm vào ban đêm, TRIM bộ nhớ, đọc thống kê pin và RAM, tắt app cài sẵn mà bạn chọn. Trình hướng dẫn từng bước giúp cài Shizuku và tự đánh dấu từng bước khi xong.
 
 CHẠY TRÊN MỌI HÃNG
 Samsung, Xiaomi, OPPO, vivo, realme, OnePlus, Google Pixel và nhiều hãng khác, Android 8 trở lên. Gợi ý dựa trên cách bạn dùng máy, không dựa trên danh sách của riêng một hãng.

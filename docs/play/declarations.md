@@ -30,6 +30,8 @@ Câu trả lời bằng tiếng Anh (Google duyệt bằng tiếng Anh). Chú th
 
 ---
 
+**Video (bắt buộc với QUERY_ALL_PACKAGES):** `https://penz7.github.io/SysClean/play/videos/query-all-packages.mp4` — 46 giây, phụ đề tiếng Anh, chỉ quay tab *System* và màn *Pre-installed apps* (không lộ app người dùng tự cài).
+
 ## 3. Data safety
 *Vị trí: App content › Data safety.*
 
