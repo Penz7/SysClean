@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="device_title">Thông tin thiết bị</string>
+
+    <string name="device_tab_overview">Tổng quan</string>
+    <string name="device_tab_cpu">CPU</string>
+    <string name="device_tab_memory">Bộ nhớ RAM</string>
+    <string name="device_tab_battery">Pin</string>
+    <string name="device_tab_display">Màn hình</string>
+    <string name="device_tab_storage">Lưu trữ</string>
+    <string name="device_tab_sensors">Cảm biến</string>
+    <string name="device_tab_cameras">Camera</string>
+    <string name="device_tab_security">Bảo mật</string>
+
+    <string name="device_section_device">Thiết bị</string>
+    <string name="device_section_android">Android</string>
+    <string name="device_manufacturer">Nhà sản xuất</string>
+    <string name="device_brand">Thương hiệu</string>
+    <string name="device_model">Mẫu máy</string>
+    <string name="device_codename">Tên mã</string>
+    <string name="device_product">Sản phẩm</string>
+    <string name="device_board">Bo mạch</string>
+    <string name="device_hardware">Phần cứng</string>
+    <string name="device_soc">Chipset</string>
+    <string name="device_android_version">Phiên bản</string>
+    <string name="device_android_version_value">Android %1$s (API %2$d)</string>
+    <string name="device_security_patch">Bản vá bảo mật</string>
+    <string name="device_build">Bản dựng</string>
+    <string name="device_kernel">Kernel</string>
+    <string name="device_bootloader">Bootloader</string>
+    <string name="device_baseband">Baseband</string>
+    <string name="device_abis">ABI hỗ trợ</string>
+    <string name="device_uptime">Thời gian hoạt động</string>
+    <string name="device_fingerprint">Fingerprint</string>
+
+    <string name="device_cpu_summary">Bộ xử lý</string>
+    <string name="device_cpu_cores">Số nhân</string>
+    <string name="device_cpu_clusters">Cụm nhân</string>
+    <string name="device_cpu_governor">Governor</string>
+    <string name="device_cpu_per_core">Từng nhân (trực tiếp)</string>
+    <string name="device_cpu_core">Nhân %1$d</string>
+    <string name="device_cpu_offline">Đang nghỉ</string>
+    <string name="device_cpu_unreadable">ROM này không cho ứng dụng đọc xung nhịp CPU.</string>
+
+    <string name="device_ram">RAM</string>
+    <string name="device_ram_used">Đã dùng</string>
+    <string name="device_ram_available">Còn trống</string>
+    <string name="device_ram_total">Tổng</string>
+    <string name="device_ram_threshold">Ngưỡng thiếu bộ nhớ</string>
+    <string name="device_ram_low">Đang thiếu bộ nhớ</string>
+    <string name="device_swap">Swap / zRAM</string>
+
+    <string name="device_battery_level">Mức pin</string>
+    <string name="device_battery_status">Trạng thái</string>
+    <string name="device_battery_health">Tình trạng</string>
+    <string name="device_battery_power_source">Nguồn sạc</string>
+    <string name="device_battery_temperature">Nhiệt độ</string>
+    <string name="device_battery_voltage">Điện áp</string>
+    <string name="device_battery_current">Dòng điện</string>
+    <string name="device_battery_technology">Công nghệ</string>
+    <string name="device_battery_cycles">Số chu kỳ sạc</string>
+    <string name="device_battery_design_capacity">Dung lượng thiết kế</string>
+    <string name="device_battery_estimated_capacity">Dung lượng đầy ước tính</string>
+    <string name="device_battery_wear">Dung lượng còn lại</string>
+    <string name="device_battery_thermal">Nhiệt độ máy</string>
+    <string name="device_battery_capacity_note">Ước tính từ bộ đo pin; độ chính xác tùy nhà sản xuất.</string>
+
+    <string name="device_display_resolution">Độ phân giải</string>
+    <string name="device_display_density">Mật độ điểm ảnh</string>
+    <string name="device_display_size">Kích thước màn hình</string>
+    <string name="device_display_refresh">Tần số quét</string>
+    <string name="device_display_supported_refresh">Tần số quét hỗ trợ</string>
+    <string name="device_display_hdr">HDR</string>
+    <string name="device_display_no_hdr">Không hỗ trợ</string>
+
+    <string name="device_storage_total">Tổng</string>
+    <string name="device_storage_used">Đã dùng</string>
+    <string name="device_storage_free">Còn trống</string>
+    <string name="device_storage_removable">Tháo rời được</string>
+
+    <string name="device_sensor_count">%1$d cảm biến</string>
+    <string name="device_sensor_vendor">Nhà cung cấp</string>
+    <string name="device_sensor_power">Điện năng</string>
+    <string name="device_sensor_range">Phạm vi tối đa</string>
+
+    <string name="device_camera_front">Camera trước</string>
+    <string name="device_camera_back">Camera sau</string>
+    <string name="device_camera_external">Camera ngoài</string>
+    <string name="device_camera_unknown">Camera</string>
+    <string name="device_camera_resolution">Độ phân giải</string>
+    <string name="device_camera_flash">Đèn flash</string>
+    <string name="device_camera_none">Thiết bị không báo camera nào.</string>
+
+    <string name="device_security_root">Root</string>
+    <string name="device_security_root_detected">Đã phát hiện</string>
+    <string name="device_security_root_not_detected">Không phát hiện</string>
+    <string name="device_security_root_traces">Dấu vết tìm thấy</string>
+    <string name="device_security_screen_lock">Khóa màn hình</string>
+    <string name="device_security_encryption">Mã hóa bộ nhớ</string>
+    <string name="device_security_encrypted">Đã mã hóa</string>
+    <string name="device_security_not_encrypted">Chưa mã hóa</string>
+    <string name="device_security_dev_options">Tùy chọn nhà phát triển</string>
+    <string name="device_security_usb_debugging">Gỡ lỗi USB</string>
+    <string name="device_security_verified_boot">Khởi động xác minh</string>
+    <string name="device_security_boot_green">Đã khóa và xác minh</string>
+    <string name="device_security_boot_yellow">Đã khóa, khóa tùy chỉnh</string>
+    <string name="device_security_boot_orange">Bootloader đã mở khóa</string>
+    <string name="device_security_selinux">SELinux</string>
+    <string name="device_security_enforcing">Enforcing</string>
+    <string name="device_security_permissive">Permissive</string>
+    <string name="device_on">Bật</string>
+    <string name="device_off">Tắt</string>
+</resources>

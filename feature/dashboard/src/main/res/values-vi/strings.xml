@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard_title">SysClean</string>
+    <string name="dashboard_health">Điểm sức khỏe</string>
+    <string name="dashboard_health_caption">/ 100</string>
+    <string name="dashboard_health_good">Thiết bị đang ở trạng thái tốt</string>
+    <string name="dashboard_health_fair">Có vài điểm cần chú ý</string>
+    <string name="dashboard_health_poor">Thiết bị cần được dọn dẹp</string>
+    <string name="dashboard_health_hint_scan">Hãy quét để tính cả file rác vào điểm số.</string>
+
+    <string name="dashboard_permissions_title">Cấp quyền để phân tích đầy đủ</string>
+    <string name="dashboard_permissions_body">Nếu thiếu quyền \"Truy cập mọi tệp\" và \"Truy cập dữ liệu sử dụng\", ứng dụng chỉ quét được một phần bộ nhớ.</string>
+    <string name="dashboard_permissions_action">Cấp quyền</string>
+
+    <string name="dashboard_ram">RAM</string>
+    <string name="dashboard_battery">Pin</string>
+    <string name="dashboard_storage">Bộ nhớ</string>
+    <string name="dashboard_free">Còn trống %1$s</string>
+    <string name="dashboard_storage_apps">Ứng dụng</string>
+    <string name="dashboard_storage_images">Hình ảnh</string>
+    <string name="dashboard_storage_videos">Video</string>
+    <string name="dashboard_storage_audio">Âm thanh</string>
+    <string name="dashboard_storage_other">File khác</string>
+    <string name="dashboard_storage_system">Hệ thống</string>
+    <string name="dashboard_storage_breakdown_missing">Cấp quyền truy cập dữ liệu sử dụng để xem chi tiết bộ nhớ.</string>
+
+    <string name="dashboard_scan_title">Phân tích file rác</string>
+    <string name="dashboard_scan_idle">Tìm bộ nhớ đệm, file sót lại, file trùng, ảnh giống nhau hoặc bị mờ và những thứ chiếm chỗ khác. Không xóa gì cho tới khi bạn xác nhận.</string>
+    <string name="dashboard_scan_start">Quét ngay</string>
+    <string name="dashboard_scan_again">Quét lại</string>
+    <string name="dashboard_scan_cancel">Hủy</string>
+    <string name="dashboard_scan_running">Đang quét… %1$s file · %2$s</string>
+    <string name="dashboard_scan_failed">Quá trình quét bị dừng: %1$s</string>
+    <string name="dashboard_scan_safe">Có thể dọn an toàn</string>
+    <string name="dashboard_scan_review">Cần bạn xem lại</string>
+    <string name="dashboard_scan_summary">Đã quét %1$s file trong %2$s giây</string>
+    <string name="dashboard_scan_skipped">Một số mục bị bỏ qua vì thiếu quyền.</string>
+    <string name="dashboard_scan_nothing">Không tìm thấy gì. Máy rất gọn gàng!</string>
+
+    <string name="dashboard_advanced_title">Dọn sâu cần Shizuku hoặc root</string>
+    <string name="dashboard_advanced_body">Mở khóa Android/data và obb, xóa cache mọi ứng dụng bằng một chạm, buộc dừng ứng dụng và gỡ bloatware.</string>
+    <string name="dashboard_advanced_action">Thiết lập</string>
+    <string name="dashboard_advanced_ready">%1$s đang hoạt động: đã mở khóa Android/data, xóa cache một chạm, buộc dừng và gỡ ứng dụng cài sẵn.</string>
+    <string name="dashboard_advanced_active_title">Đã mở khóa dọn sâu</string>
+    <string name="dashboard_advanced_bloat">Ứng dụng cài sẵn</string>
+    <string name="dashboard_advanced_cache">Cache ứng dụng</string>
+
+    <string name="dashboard_trash">Thùng rác</string>
+    <string name="dashboard_quick_clean">Dọn rác an toàn · %1$s</string>
+    <string name="dashboard_quick_clean_title">Dọn toàn bộ rác an toàn?</string>
+    <string name="dashboard_quick_clean_body">Sẽ dọn %1$s gồm file tạm, ảnh thu nhỏ, APK đã cài, thư mục rỗng và thư mục sót lại. File nằm trong Thùng rác %2$d ngày. Cache ứng dụng được xóa riêng ở màn hình của nó.</string>
+    <string name="dashboard_quick_clean_action">Dọn</string>
+    <string name="dashboard_cancel">Hủy</string>
+    <string name="dashboard_cleaning">Đang dọn %1$d/%2$d…</string>
+    <string name="dashboard_clean_result">Đã dọn %1$d mục · giải phóng %2$s</string>
+    <string name="dashboard_undo">Hoàn tác</string>
+    <string name="dashboard_trash_note">File đã dọn được chuyển vào Thùng rác trước, có thể khôi phục trong %1$d ngày.</string>
+
+    <string name="dashboard_tips_title">Cách tăng điểm</string>
+    <string name="dashboard_tip_gain">+%1$d điểm</string>
+    <string name="dashboard_tip_storage_title">Giải phóng bộ nhớ</string>
+    <string name="dashboard_tip_storage_body">Còn trống %1$d%%. Nên giữ trống ít nhất 25%% để máy chạy mượt và cài được bản cập nhật; cần giải phóng thêm khoảng %2$s.</string>
+    <string name="dashboard_tip_junk_title">Dọn rác</string>
+    <string name="dashboard_tip_junk_body">Có %1$s có thể dọn an toàn, trong đó %2$s là cache ứng dụng.</string>
+    <string name="dashboard_tip_scan_title">Quét file rác</string>
+    <string name="dashboard_tip_scan_body">Điểm chưa tính file rác cho tới khi bạn quét.</string>
+    <string name="dashboard_tip_memory_title">RAM đang chật</string>
+    <string name="dashboard_tip_memory_body">Chỉ còn trống %1$d%% RAM. Android tự quản lý bộ nhớ nên các app "tăng tốc RAM" không giúp được gì; hãy đóng ứng dụng nặng không dùng hoặc khởi động lại máy nếu thấy chậm.</string>
+    <string name="dashboard_tip_battery_title">Pin cần chú ý</string>
+    <string name="dashboard_tip_battery_body">Hệ thống báo pin ở trạng thái "%1$s". Nếu pin tụt nhanh hoặc nóng, nên mang đi kiểm tra.</string>
+    <string name="dashboard_tip_action_large">File lớn</string>
+    <string name="dashboard_tip_action_unused">App không dùng</string>
+    <string name="dashboard_tip_action_cache">Cache ứng dụng</string>
+    <string name="dashboard_tip_all_good">Hiện không có gì cần cải thiện.</string>
+    <string name="dashboard_tip_junk_previous">Lần quét trước tìm thấy %1$s rác an toàn. Quét lại để dọn.</string>
+</resources>

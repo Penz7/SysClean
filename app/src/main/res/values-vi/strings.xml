@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_dashboard">Tổng quan</string>
+    <string name="nav_device">Thiết bị</string>
+    <string name="nav_apps">Ứng dụng</string>
+    <string name="nav_settings">Cài đặt</string>
+    <string name="nav_performance">Hiệu năng</string>
+</resources>

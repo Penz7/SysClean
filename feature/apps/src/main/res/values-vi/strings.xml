@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="apps_title">Ứng dụng</string>
+    <string name="apps_search">Tìm ứng dụng</string>
+    <string name="apps_filter_user">Đã cài</string>
+    <string name="apps_filter_system">Hệ thống</string>
+    <string name="apps_filter_all">Tất cả</string>
+    <string name="apps_filter_unused">Không dùng 90+ ngày</string>
+    <string name="apps_sort">Sắp xếp</string>
+    <string name="apps_sort_size">Dung lượng</string>
+    <string name="apps_sort_cache">Bộ nhớ đệm</string>
+    <string name="apps_sort_last_used">Lần dùng cuối</string>
+    <string name="apps_sort_name">Tên</string>
+    <string name="apps_summary">%1$d ứng dụng · %2$s · cache %3$s</string>
+    <string name="apps_summary_no_size">%1$d ứng dụng</string>
+    <string name="apps_cache">cache %1$s</string>
+    <string name="apps_unused">Không dùng</string>
+    <string name="apps_disabled">Đã tắt</string>
+    <string name="apps_usage_title">Cần quyền \"Truy cập dữ liệu sử dụng\"</string>
+    <string name="apps_usage_body">Cho phép để SysClean hiển thị dung lượng của từng ứng dụng và những ứng dụng bạn không còn dùng.</string>
+    <string name="apps_usage_action">Cho phép</string>
+    <string name="apps_empty">Không có ứng dụng phù hợp.</string>
+
+    <string name="apps_uninstall">Gỡ cài đặt</string>
+    <string name="apps_uninstall_one">Gỡ %1$s</string>
+    <string name="apps_select_hint">Nhấn giữ một ứng dụng để chọn nhiều</string>
+    <string name="apps_selected">Đã chọn %1$d · %2$s</string>
+    <string name="apps_select_all">Chọn tất cả đang hiện</string>
+    <string name="apps_close_selection">Hủy chọn</string>
+    <string name="apps_uninstall_selected">Gỡ %1$d ứng dụng · %2$s</string>
+    <string name="apps_uninstall_confirm_title">Gỡ %1$d ứng dụng?</string>
+    <string name="apps_uninstall_confirm_body">Android sẽ hỏi xác nhận từng ứng dụng. Dữ liệu của chúng sẽ bị xóa.</string>
+    <string name="apps_uninstall_progress">Đang gỡ %1$d/%2$d…</string>
+    <plurals name="apps_uninstalled">
+        <item quantity="other">Đã gỡ %d ứng dụng</item>
+    </plurals>
+    <string name="apps_cancel">Hủy</string>
+
+    <string name="apps_force_stop">Buộc dừng</string>
+    <string name="apps_force_stop_selected">Buộc dừng %1$d</string>
+    <string name="apps_app_info">Thông tin ứng dụng</string>
+    <string name="apps_more">Tùy chọn khác cho %1$s</string>
+    <plurals name="apps_force_stopped">
+        <item quantity="other">Đã dừng %d ứng dụng</item>
+    </plurals>
+    <string name="apps_uninstall_silent_body">Chế độ nâng cao đang bật nên các ứng dụng sẽ được gỡ ngay, không cần xác nhận từng cái. Dữ liệu của chúng sẽ bị xóa.</string>
+    <string name="apps_bloatware">Ứng dụng cài sẵn</string>
+
+    <string name="bloat_title">Ứng dụng cài sẵn</string>
+    <string name="bloat_back">Quay lại</string>
+    <string name="bloat_intro">Các ứng dụng do nhà sản xuất cài sẵn và gỡ an toàn. Ứng dụng chỉ bị gỡ khỏi tài khoản của bạn: hệ thống vẫn giữ bản gốc nên bạn có thể khôi phục tại đây bất cứ lúc nào.</string>
+    <string name="bloat_recommended">Khuyên gỡ</string>
+    <string name="bloat_removed">Đã gỡ hoặc đã tắt</string>
+    <string name="bloat_none">Không còn gì để gỡ. Máy bạn đã gọn gàng.</string>
+    <string name="bloat_unused">Ứng dụng cài sẵn bạn không bao giờ mở</string>
+    <string name="bloat_unused_hint">Tìm theo cách bạn dùng máy nên áp dụng cho mọi hãng. Đã loại trừ đồng hồ, lịch, email, camera, thư viện ảnh, trình duyệt, kho ứng dụng và app đang làm việc ngầm. Một số app vẫn hoạt động dù không mở (sao lưu, đồng hồ thông minh, xe hơi): chỉ tắt app bạn biết rõ. Có thể bật lại bằng nút Khôi phục bên dưới.</string>
+    <string name="bloat_unused_needs_usage">Hãy cấp quyền truy cập dữ liệu sử dụng trong Cài đặt để tìm app cài sẵn bạn không dùng.</string>
+    <string name="bloat_unused_none">Mọi app cài sẵn ở đây đều được dùng trong tháng qua.</string>
+    <string name="bloat_remove">Gỡ</string>
+    <string name="bloat_disable">Tắt</string>
+    <string name="bloat_restore">Khôi phục</string>
+    <string name="bloat_state_removed">Đã gỡ</string>
+    <string name="bloat_state_disabled">Đã tắt</string>
+    <string name="bloat_reason_facebook">Dịch vụ Facebook do nhà sản xuất cài sẵn</string>
+    <string name="bloat_reason_ads">Quảng cáo và theo dõi sử dụng của nhà sản xuất</string>
+    <string name="bloat_reason_extra">Ứng dụng cài sẵn, không thành phần nào khác phụ thuộc</string>
+    <string name="bloat_reason_unused">Hơn 1 tháng chưa mở</string>
+    <string name="bloat_done_removed">Đã gỡ %1$s</string>
+    <string name="bloat_done_disabled">Đã tắt %1$s</string>
+    <string name="bloat_done_restored">Đã khôi phục %1$s</string>
+    <string name="bloat_failed">Không thể thay đổi %1$s</string>
+    <string name="bloat_needs_shizuku">Hãy bật Shizuku (hoặc bật chế độ root) trong Cài đặt để quản lý ứng dụng cài sẵn.</string>
+</resources>

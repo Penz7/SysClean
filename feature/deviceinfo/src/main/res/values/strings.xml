@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="device_title">Device info</string>
+
+    <string name="device_tab_overview">Overview</string>
+    <string name="device_tab_cpu">CPU</string>
+    <string name="device_tab_memory">Memory</string>
+    <string name="device_tab_battery">Battery</string>
+    <string name="device_tab_display">Display</string>
+    <string name="device_tab_storage">Storage</string>
+    <string name="device_tab_sensors">Sensors</string>
+    <string name="device_tab_cameras">Cameras</string>
+    <string name="device_tab_security">Security</string>
+
+    <string name="device_section_device">Device</string>
+    <string name="device_section_android">Android</string>
+    <string name="device_manufacturer">Manufacturer</string>
+    <string name="device_brand">Brand</string>
+    <string name="device_model">Model</string>
+    <string name="device_codename">Codename</string>
+    <string name="device_product">Product</string>
+    <string name="device_board">Board</string>
+    <string name="device_hardware">Hardware</string>
+    <string name="device_soc">Chipset</string>
+    <string name="device_android_version">Version</string>
+    <string name="device_android_version_value">Android %1$s (API %2$d)</string>
+    <string name="device_security_patch">Security patch</string>
+    <string name="device_build">Build</string>
+    <string name="device_kernel">Kernel</string>
+    <string name="device_bootloader">Bootloader</string>
+    <string name="device_baseband">Baseband</string>
+    <string name="device_abis">Supported ABIs</string>
+    <string name="device_uptime">Uptime</string>
+    <string name="device_fingerprint">Fingerprint</string>
+
+    <string name="device_cpu_summary">Processor</string>
+    <string name="device_cpu_cores">Cores</string>
+    <string name="device_cpu_clusters">Clusters</string>
+    <string name="device_cpu_governor">Governor</string>
+    <string name="device_cpu_per_core">Per core (live)</string>
+    <string name="device_cpu_core">Core %1$d</string>
+    <string name="device_cpu_offline">Sleeping</string>
+    <string name="device_cpu_unreadable">This ROM does not let apps read CPU frequencies.</string>
+
+    <string name="device_ram">RAM</string>
+    <string name="device_ram_used">Used</string>
+    <string name="device_ram_available">Available</string>
+    <string name="device_ram_total">Total</string>
+    <string name="device_ram_threshold">Low-memory threshold</string>
+    <string name="device_ram_low">Low memory now</string>
+    <string name="device_swap">Swap / zRAM</string>
+
+    <string name="device_battery_level">Level</string>
+    <string name="device_battery_status">Status</string>
+    <string name="device_battery_health">Health</string>
+    <string name="device_battery_power_source">Power source</string>
+    <string name="device_battery_temperature">Temperature</string>
+    <string name="device_battery_voltage">Voltage</string>
+    <string name="device_battery_current">Current</string>
+    <string name="device_battery_technology">Technology</string>
+    <string name="device_battery_cycles">Charge cycles</string>
+    <string name="device_battery_design_capacity">Design capacity</string>
+    <string name="device_battery_estimated_capacity">Estimated full capacity</string>
+    <string name="device_battery_wear">Remaining capacity</string>
+    <string name="device_battery_thermal">Device temperature</string>
+    <string name="device_battery_capacity_note">Estimated from the fuel gauge; accuracy depends on the manufacturer.</string>
+
+    <string name="device_display_resolution">Resolution</string>
+    <string name="device_display_density">Density</string>
+    <string name="device_display_size">Screen size</string>
+    <string name="device_display_refresh">Refresh rate</string>
+    <string name="device_display_supported_refresh">Supported refresh rates</string>
+    <string name="device_display_hdr">HDR</string>
+    <string name="device_display_no_hdr">Not supported</string>
+
+    <string name="device_storage_total">Total</string>
+    <string name="device_storage_used">Used</string>
+    <string name="device_storage_free">Free</string>
+    <string name="device_storage_removable">Removable</string>
+
+    <string name="device_sensor_count">%1$d sensors</string>
+    <string name="device_sensor_vendor">Vendor</string>
+    <string name="device_sensor_power">Power</string>
+    <string name="device_sensor_range">Max range</string>
+
+    <string name="device_camera_front">Front camera</string>
+    <string name="device_camera_back">Rear camera</string>
+    <string name="device_camera_external">External camera</string>
+    <string name="device_camera_unknown">Camera</string>
+    <string name="device_camera_resolution">Resolution</string>
+    <string name="device_camera_flash">Flash</string>
+    <string name="device_camera_none">No cameras reported.</string>
+
+    <string name="device_security_root">Root</string>
+    <string name="device_security_root_detected">Detected</string>
+    <string name="device_security_root_not_detected">Not detected</string>
+    <string name="device_security_root_traces">Traces found</string>
+    <string name="device_security_screen_lock">Screen lock</string>
+    <string name="device_security_encryption">Storage encryption</string>
+    <string name="device_security_encrypted">Encrypted</string>
+    <string name="device_security_not_encrypted">Not encrypted</string>
+    <string name="device_security_dev_options">Developer options</string>
+    <string name="device_security_usb_debugging">USB debugging</string>
+    <string name="device_security_verified_boot">Verified boot</string>
+    <string name="device_security_boot_green">Locked and verified</string>
+    <string name="device_security_boot_yellow">Locked, custom key</string>
+    <string name="device_security_boot_orange">Bootloader unlocked</string>
+    <string name="device_security_selinux">SELinux</string>
+    <string name="device_security_enforcing">Enforcing</string>
+    <string name="device_security_permissive">Permissive</string>
+    <string name="device_on">On</string>
+    <string name="device_off">Off</string>
+</resources>

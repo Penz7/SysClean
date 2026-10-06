@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">Sức khỏe SysClean</string>
+    <string name="widget_description">Điểm sức khỏe, bộ nhớ và RAM của máy</string>
+    <string name="widget_title">Sức khỏe thiết bị</string>
+    <string name="widget_status_good">Tốt</string>
+    <string name="widget_status_fair">Cần chú ý</string>
+    <string name="widget_status_poor">Cần dọn dẹp</string>
+    <string name="widget_status_unknown">Đang đo…</string>
+    <string name="widget_storage">Bộ nhớ</string>
+    <string name="widget_storage_free">Trống %1$s</string>
+    <string name="widget_ram">RAM</string>
+    <string name="widget_battery">Pin %1$d%%</string>
+    <string name="widget_scan_hint">Mở app và quét để tính cả file rác</string>
+</resources>

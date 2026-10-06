@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard_title">SysClean</string>
+    <string name="dashboard_health">Health score</string>
+    <string name="dashboard_health_caption">/ 100</string>
+    <string name="dashboard_health_good">Your device is in good shape</string>
+    <string name="dashboard_health_fair">Some things need attention</string>
+    <string name="dashboard_health_poor">Your device needs a clean-up</string>
+    <string name="dashboard_health_hint_scan">Run a scan to include junk files in the score.</string>
+
+    <string name="dashboard_permissions_title">Grant access for a full analysis</string>
+    <string name="dashboard_permissions_body">Without \"All files access\" and \"Usage access\" the scan only sees part of your storage.</string>
+    <string name="dashboard_permissions_action">Grant access</string>
+
+    <string name="dashboard_ram">RAM</string>
+    <string name="dashboard_battery">Battery</string>
+    <string name="dashboard_storage">Storage</string>
+    <string name="dashboard_free">%1$s free</string>
+    <string name="dashboard_storage_apps">Apps</string>
+    <string name="dashboard_storage_images">Images</string>
+    <string name="dashboard_storage_videos">Videos</string>
+    <string name="dashboard_storage_audio">Audio</string>
+    <string name="dashboard_storage_other">Other files</string>
+    <string name="dashboard_storage_system">System</string>
+    <string name="dashboard_storage_breakdown_missing">Grant usage access to see what is using your storage.</string>
+
+    <string name="dashboard_scan_title">Junk analysis</string>
+    <string name="dashboard_scan_idle">Find cache, leftover files, duplicates, similar or blurry photos and other space wasters. Nothing is removed until you confirm.</string>
+    <string name="dashboard_scan_start">Scan now</string>
+    <string name="dashboard_scan_again">Scan again</string>
+    <string name="dashboard_scan_cancel">Cancel</string>
+    <string name="dashboard_scan_running">Scanning… %1$s files · %2$s</string>
+    <string name="dashboard_scan_failed">The scan stopped: %1$s</string>
+    <string name="dashboard_scan_safe">Safe to clean</string>
+    <string name="dashboard_scan_review">Needs your review</string>
+    <string name="dashboard_scan_summary">%1$s files scanned in %2$s s</string>
+    <string name="dashboard_scan_skipped">Some categories were skipped because a permission is missing.</string>
+    <string name="dashboard_scan_nothing">Nothing found here. Nice and tidy!</string>
+
+    <string name="dashboard_advanced_title">Deep clean needs Shizuku or root</string>
+    <string name="dashboard_advanced_body">Unlocks Android/data and obb, one-tap cache clearing for every app, force-stop and bloatware removal.</string>
+    <string name="dashboard_advanced_action">Set up</string>
+    <string name="dashboard_advanced_ready">%1$s is active: Android/data, one-tap cache clearing, force stop and pre-installed app removal are unlocked.</string>
+    <string name="dashboard_advanced_active_title">Deep clean is unlocked</string>
+    <string name="dashboard_advanced_bloat">Pre-installed apps</string>
+    <string name="dashboard_advanced_cache">App cache</string>
+
+    <string name="dashboard_trash">Recycle bin</string>
+    <string name="dashboard_quick_clean">Clean safe junk · %1$s</string>
+    <string name="dashboard_quick_clean_title">Clean all safe junk?</string>
+    <string name="dashboard_quick_clean_body">%1$s of temporary files, thumbnails, installed APKs, empty and leftover folders will be removed. Files stay in the Recycle bin for %2$d days. App cache is cleared separately from its own screen.</string>
+    <string name="dashboard_quick_clean_action">Clean</string>
+    <string name="dashboard_cancel">Cancel</string>
+    <string name="dashboard_cleaning">Cleaning %1$d of %2$d…</string>
+    <string name="dashboard_clean_result">Cleaned %1$d items · %2$s freed</string>
+    <string name="dashboard_undo">Undo</string>
+    <string name="dashboard_trash_note">Cleaned files go to the Recycle bin first and can be restored for %1$d days.</string>
+
+    <string name="dashboard_tips_title">How to raise your score</string>
+    <string name="dashboard_tip_gain">+%1$d points</string>
+    <string name="dashboard_tip_storage_title">Free up storage</string>
+    <string name="dashboard_tip_storage_body">%1$d%% free. Keeping at least 25%% free keeps Android fast and lets updates install; about %2$s more is needed.</string>
+    <string name="dashboard_tip_junk_title">Clean junk</string>
+    <string name="dashboard_tip_junk_body">%1$s can be removed safely, including %2$s of app cache.</string>
+    <string name="dashboard_tip_scan_title">Scan for junk</string>
+    <string name="dashboard_tip_scan_body">The score does not include junk files until you scan.</string>
+    <string name="dashboard_tip_memory_title">Memory is tight</string>
+    <string name="dashboard_tip_memory_body">Only %1$d%% of RAM is free. Android manages memory by itself, so "RAM boosters" do not help; close heavy apps you are not using or restart the phone if it feels slow.</string>
+    <string name="dashboard_tip_battery_title">Battery needs attention</string>
+    <string name="dashboard_tip_battery_body">The system reports the battery as "%1$s". If it drains fast or gets hot, consider a battery service.</string>
+    <string name="dashboard_tip_action_large">Large files</string>
+    <string name="dashboard_tip_action_unused">Unused apps</string>
+    <string name="dashboard_tip_action_cache">App cache</string>
+    <string name="dashboard_tip_all_good">Nothing to improve right now.</string>
+    <string name="dashboard_tip_junk_previous">The last scan found %1$s of safe junk. Scan again to clean it.</string>
+</resources>

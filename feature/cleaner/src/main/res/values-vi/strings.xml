@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cleaner_back">Quay lại</string>
+    <string name="cleaner_summary">%1$s · %2$s</string>
+    <string name="cleaner_selected">Đã chọn %1$d · %2$s</string>
+    <string name="cleaner_select_all">Chọn tất cả</string>
+    <string name="cleaner_select_none">Bỏ chọn</string>
+    <string name="cleaner_select_extras">Chỉ giữ bản tốt nhất</string>
+    <string name="cleaner_clean_button">Dọn %1$d mục · %2$s</string>
+    <string name="cleaner_progress">Đang dọn %1$d/%2$d…</string>
+    <string name="cleaner_group">Nhóm %1$d · %2$d file</string>
+    <string name="cleaner_keep">Giữ lại</string>
+    <string name="cleaner_ignore">Không hiện mục này nữa</string>
+    <string name="cleaner_ignored">Đã thêm vào danh sách bỏ qua</string>
+    <string name="cleaner_more">Thêm</string>
+
+    <string name="cleaner_confirm_title">Chuyển %1$d mục vào Thùng rác?</string>
+    <string name="cleaner_confirm_body">Giải phóng %1$s ngay. Bạn có thể khôi phục từ Thùng rác trong %2$d ngày.</string>
+    <string name="cleaner_confirm_empty_title">Xóa %1$d thư mục rỗng?</string>
+    <string name="cleaner_confirm_empty_body">Thư mục rỗng không chứa file nào nên sẽ được xóa ngay.</string>
+    <string name="cleaner_confirm_action">Dọn</string>
+    <string name="cleaner_cancel">Hủy</string>
+
+    <string name="cleaner_result">Đã chuyển %1$d mục (%2$s) vào Thùng rác</string>
+    <string name="cleaner_result_folders">Đã xóa %1$d thư mục rỗng</string>
+    <string name="cleaner_result_unverified">Bỏ qua %1$d bản sao vì nội dung không khớp hoàn toàn</string>
+    <string name="cleaner_result_failed">%1$d mục không thể di chuyển</string>
+    <string name="cleaner_undo">Hoàn tác</string>
+    <string name="cleaner_restored">Đã khôi phục %1$d mục</string>
+
+    <string name="cleaner_done_title">Đã dọn sạch</string>
+    <string name="cleaner_done_body">Mục này không còn gì.</string>
+    <string name="cleaner_no_scan_title">Chưa có kết quả quét</string>
+    <string name="cleaner_no_scan_body">Hãy quét ở tab Tổng quan trước.</string>
+
+    <string name="cleaner_app_cache_hint">Android chỉ cho ứng dụng thường xóa cache của ứng dụng khác qua hộp thoại hệ thống.</string>
+    <string name="cleaner_app_cache_button">Xóa cache tất cả ứng dụng</string>
+    <string name="cleaner_app_cache_legacy">Trên phiên bản Android này, chạm vào ứng dụng để mở trang thông tin và xóa cache tại đó.</string>
+    <string name="cleaner_app_cache_done">Đã xóa cache ứng dụng</string>
+    <string name="cleaner_app_open">Chạm để mở thông tin ứng dụng</string>
+
+    <string name="cleaner_result_deleted">Đã dọn %1$d mục · giải phóng %2$s</string>
+    <string name="cleaner_privileged_note">Thư mục trong Android/data và Android/obb sẽ bị xóa vĩnh viễn, không vào Thùng rác.</string>
+    <string name="cleaner_app_cache_confirm_title">Xóa cache của %1$d ứng dụng?</string>
+    <string name="cleaner_app_cache_confirm_body">Ứng dụng sẽ tự tạo lại cache khi cần. Với từng ứng dụng chỉ xóa được cache trong Android/data; dùng "Xóa toàn bộ cache" để xóa cả cache nội bộ.</string>
+    <string name="cleaner_clear_all">Xóa toàn bộ cache (gồm cache nội bộ)</string>
+    <string name="cleaner_clear_all_title">Xóa cache của mọi ứng dụng?</string>
+    <string name="cleaner_clear_all_body">Android sẽ giải phóng cache của tất cả ứng dụng, giống như khi bộ nhớ sắp đầy. Ứng dụng vẫn giữ đăng nhập và dữ liệu.</string>
+    <string name="cleaner_clear_all_running">Đang xóa cache của mọi ứng dụng…</string>
+    <string name="cleaner_clear_all_done">Đã giải phóng %1$s cache ứng dụng</string>
+    <string name="cleaner_shizuku_hint">Chế độ nâng cao đang bật: tích chọn ứng dụng để xóa cache trực tiếp.</string>
+
+    <string name="cleaner_confirm_delete_title">Xóa vĩnh viễn %1$d mục?</string>
+    <string name="cleaner_full_cache">Tổng cache %1$s, gồm cache nội bộ</string>
+    <string name="cleaner_confirm_delete_body">Giải phóng %1$s và không thể hoàn tác.</string>
+</resources>

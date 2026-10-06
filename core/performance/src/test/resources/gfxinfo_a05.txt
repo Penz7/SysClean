@@ -1,0 +1,20 @@
+Applications Graphics Acceleration Info:
+Uptime: 688613093 Realtime: 2613907501
+
+** Graphics info for pid 2948 [com.sec.android.app.launcher] **
+
+Stats since: 661694330993977ns
+Total frames rendered: 4237
+Janky frames: 263 (6.21%)
+Janky frames (legacy): 652 (15.39%)
+50th percentile: 11ms
+90th percentile: 26ms
+95th percentile: 36ms
+99th percentile: 81ms
+Number Missed Vsync: 88
+Number High input latency: 3437
+Number Slow UI thread: 187
+Number Slow bitmap uploads: 22
+Number Slow issue draw commands: 76
+Number Frame deadline missed: 263
+Number Frame deadline missed (legacy): 312

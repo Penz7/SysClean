@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Cài đặt</string>
+
+    <string name="settings_mode_title">Chế độ truy cập</string>
+    <string name="settings_mode_current">Chế độ hiện tại</string>
+    <string name="settings_mode_normal_body">Ứng dụng phân tích bằng quyền Android tiêu chuẩn. Các tính năng dọn sâu cần Shizuku hoặc root.</string>
+    <string name="settings_mode_advanced_body">Đang dùng %1$s: đã mở khóa dọn Android/data, xóa cache một chạm, buộc dừng và gỡ ứng dụng cài sẵn.</string>
+
+    <string name="settings_permissions_title">Quyền bắt buộc</string>
+    <string name="settings_all_files">Truy cập mọi tệp</string>
+    <string name="settings_all_files_desc">Quét toàn bộ bộ nhớ trong để tìm file rác, file trùng và file lớn.</string>
+    <string name="settings_storage_legacy">Quyền bộ nhớ</string>
+    <string name="settings_usage">Truy cập dữ liệu sử dụng</string>
+    <string name="settings_usage_desc">Đọc dung lượng, bộ nhớ đệm và lần dùng cuối của từng ứng dụng.</string>
+    <string name="settings_grant">Cấp quyền</string>
+
+    <string name="settings_advanced_title">Chế độ nâng cao (Shizuku hoặc root)</string>
+    <string name="settings_advanced_intro">Android chặn ứng dụng thường truy cập những vùng này. Cài Shizuku (không cần root) hoặc root máy để mở khóa:</string>
+    <string name="settings_advanced_feature_data">Đọc và dọn Android/data, Android/obb</string>
+    <string name="settings_advanced_feature_cache">Xóa cache của mọi ứng dụng cùng lúc, không phải bấm qua Cài đặt</string>
+    <string name="settings_advanced_feature_stop">Buộc dừng ứng dụng chạy ngầm</string>
+    <string name="settings_advanced_feature_bloat">Tắt hoặc gỡ bloatware cài sẵn</string>
+    <string name="settings_shizuku">Shizuku</string>
+    <string name="settings_shizuku_not_installed">Chưa cài đặt</string>
+    <string name="settings_shizuku_not_running">Đã cài nhưng chưa chạy</string>
+    <string name="settings_shizuku_permission">Đang chạy, cần cấp quyền</string>
+    <string name="settings_shizuku_ready">Sẵn sàng</string>
+    <string name="settings_shizuku_install">Tải Shizuku</string>
+    <string name="settings_shizuku_open">Mở Shizuku</string>
+    <string name="settings_shizuku_grant">Cho phép SysClean</string>
+    <string name="settings_shizuku_hint">Khởi động Shizuku bằng Gỡ lỗi không dây (Android 11+) hoặc qua ADB trên máy tính. Sau mỗi lần khởi động lại máy cần bật lại Shizuku.</string>
+    <string name="settings_root">Root</string>
+    <string name="settings_root_detected">Đã phát hiện</string>
+    <string name="settings_root_not_detected">Không phát hiện</string>
+    <string name="settings_root_hint">Root là tùy chọn. SysClean chỉ gọi su sau khi bạn bấm \"Bật chế độ root\"; ứng dụng quản lý root (Magisk, KernelSU…) sẽ hỏi bạn cho phép.</string>
+
+    <string name="settings_language_title">Ngôn ngữ</string>
+    <string name="settings_language_system">Theo hệ thống</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+
+    <string name="settings_about_title">Thông tin</string>
+    <string name="settings_version">Phiên bản</string>
+
+    <string name="settings_cleaning_title">Dọn dẹp</string>
+    <string name="settings_trash">Thùng rác</string>
+    <string name="settings_trash_desc">Khôi phục hoặc xóa vĩnh viễn file đã dọn</string>
+    <string name="settings_retention">Giữ file đã dọn trong</string>
+    <plurals name="settings_days">
+        <item quantity="other">%d ngày</item>
+    </plurals>
+    <string name="settings_whitelist">Mục bỏ qua</string>
+    <string name="settings_whitelist_desc">%1$d mục không bao giờ bị coi là rác</string>
+    <string name="whitelist_title">Mục bỏ qua</string>
+    <string name="whitelist_back">Quay lại</string>
+    <string name="whitelist_remove">Bỏ khỏi danh sách</string>
+    <string name="whitelist_empty_title">Chưa bỏ qua mục nào</string>
+    <string name="whitelist_empty_body">Trong một loại rác, dùng menu ⋮ của một mục và chọn "Không hiện mục này nữa".</string>
+
+    <string name="settings_shizuku_guide">Cách bật Shizuku (không cần root)</string>
+    <string name="settings_shizuku_step1">Cài Shizuku từ Google Play.</string>
+    <string name="settings_shizuku_step2">Bật Tùy chọn nhà phát triển: Cài đặt › Giới thiệu điện thoại (một số máy › Thông tin phần mềm) › chạm 7 lần vào \"Số bản dựng\". Một số hãng dùng dòng phiên bản hệ điều hành thay thế (MIUI, HyperOS, ColorOS…).</string>
+    <string name="settings_shizuku_step3">Trong Tùy chọn nhà phát triển, bật \"Gỡ lỗi không dây\" (cần bật Wi-Fi).</string>
+    <string name="settings_shizuku_step4">Trong Shizuku chọn "Ghép nối" và cho phép thông báo. Vào Gỡ lỗi không dây › "Ghép nối thiết bị bằng mã ghép nối" rồi nhập mã vào thông báo của Shizuku.</string>
+    <string name="settings_shizuku_step5">Quay lại Shizuku bấm "Bắt đầu", sau đó trở lại đây bấm "Cho phép SysClean".</string>
+    <string name="settings_shizuku_step_pc">Dùng máy tính: cắm USB, bật Gỡ lỗi USB và chạy lệnh adb mà Shizuku hiển thị.</string>
+    <string name="settings_shizuku_step_pc_only">Android 10 trở xuống không có Gỡ lỗi không dây: bật \"Gỡ lỗi USB\", cắm vào máy tính và chạy lệnh adb hiển thị trong Shizuku. Làm lại sau mỗi lần khởi động máy.</string>
+    <string name="settings_open_dev_options">Mở Tùy chọn nhà phát triển</string>
+
+    <string name="settings_shizuku_xiaomi_title">Xiaomi giới hạn quyền của adb</string>
+    <string name="settings_shizuku_xiaomi_body">Nếu Shizuku báo "quyền của adb bị hạn chế": vào Tùy chọn nhà phát triển, bật "Gỡ lỗi USB (Cài đặt bảo mật)" (cần lắp SIM và đăng nhập Mi account), khởi động lại Shizuku rồi bấm "Cho phép SysClean" lần nữa.</string>
+    <string name="settings_shizuku_coloros_title">OPPO, realme và OnePlus thu hồi quyền của adb</string>
+    <string name="settings_shizuku_coloros_body">Vào Tùy chọn nhà phát triển, bật \"Tắt giám sát quyền\" (Disable permission monitoring), sau đó khởi động lại Shizuku và bấm \"Cho phép SysClean\".</string>
+    <string name="settings_shizuku_flyme_title">Meizu chặn adb</string>
+    <string name="settings_shizuku_flyme_body">Vào Tùy chọn nhà phát triển, tắt \"Bảo vệ thanh toán Flyme\" (Flyme payment protection), sau đó khởi động lại Shizuku.</string>
+
+    <string name="settings_root_on">Đang bật</string>
+    <string name="settings_root_enable">Bật chế độ root</string>
+    <string name="settings_root_disable">Tắt chế độ root</string>
+    <string name="settings_root_try">Máy đã root nhưng không phát hiện? Vẫn thử bật</string>
+    <string name="settings_root_waiting">Đang chờ ứng dụng quản lý root…</string>
+    <string name="settings_root_enabled">Đã bật chế độ root</string>
+    <string name="settings_root_denied">Không được cấp quyền root</string>
+    <string name="settings_root_shizuku_first">Khi Shizuku đang chạy, app ưu tiên dùng Shizuku; chế độ root sẽ thay thế khi Shizuku dừng.</string>
+
+    <string name="settings_widget_title">Widget màn hình chính</string>
+    <string name="settings_widget_desc">Xem điểm sức khỏe, dung lượng trống và RAM mà không cần mở app.</string>
+    <string name="settings_widget_add">Thêm vào màn hình chính</string>
+    <string name="settings_widget_manual">Launcher của bạn không cho app tự thêm widget. Hãy nhấn giữ chỗ trống trên màn hình chính, chọn Widget rồi chọn SysClean.</string>
+</resources>

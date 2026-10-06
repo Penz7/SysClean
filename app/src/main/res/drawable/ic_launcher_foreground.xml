@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Phone outline with a sparkle: "a clean device". Content stays inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineJoin="round"
+        android:pathData="M42,32 L62,32 Q66,32 66,36 L66,72 Q66,76 62,76 L42,76 Q38,76 38,72 L38,36 Q38,32 42,32 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,70 L56,70 L56,73 L48,73 Z" />
+    <path
+        android:fillColor="#7AF8D4"
+        android:pathData="M68,30 Q69.5,37.5 77,39 Q69.5,40.5 68,48 Q66.5,40.5 59,39 Q66.5,37.5 68,30 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,46 Q52.8,50.2 57,51 Q52.8,51.8 52,56 Q51.2,51.8 47,51 Q51.2,50.2 52,46 Z" />
+</vector>

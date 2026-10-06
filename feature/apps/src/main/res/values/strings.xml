@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="apps_title">Apps</string>
+    <string name="apps_search">Search apps</string>
+    <string name="apps_filter_user">Installed</string>
+    <string name="apps_filter_system">System</string>
+    <string name="apps_filter_all">All</string>
+    <string name="apps_filter_unused">Unused 90+ days</string>
+    <string name="apps_sort">Sort</string>
+    <string name="apps_sort_size">Size</string>
+    <string name="apps_sort_cache">Cache</string>
+    <string name="apps_sort_last_used">Last used</string>
+    <string name="apps_sort_name">Name</string>
+    <string name="apps_summary">%1$d apps · %2$s · cache %3$s</string>
+    <string name="apps_summary_no_size">%1$d apps</string>
+    <string name="apps_cache">cache %1$s</string>
+    <string name="apps_unused">Unused</string>
+    <string name="apps_disabled">Disabled</string>
+    <string name="apps_usage_title">Sizes and usage need \"Usage access\"</string>
+    <string name="apps_usage_body">Allow it so SysClean can show how much space each app takes and which ones you no longer use.</string>
+    <string name="apps_usage_action">Allow</string>
+    <string name="apps_empty">No apps match.</string>
+
+    <string name="apps_uninstall">Uninstall</string>
+    <string name="apps_uninstall_one">Uninstall %1$s</string>
+    <string name="apps_select_hint">Long-press an app to select several</string>
+    <string name="apps_selected">%1$d selected · %2$s</string>
+    <string name="apps_select_all">Select all shown</string>
+    <string name="apps_close_selection">Cancel selection</string>
+    <string name="apps_uninstall_selected">Uninstall %1$d apps · %2$s</string>
+    <string name="apps_uninstall_confirm_title">Uninstall %1$d apps?</string>
+    <string name="apps_uninstall_confirm_body">Android will ask you to confirm each one. Their data will be deleted.</string>
+    <string name="apps_uninstall_progress">Uninstalling %1$d of %2$d…</string>
+    <plurals name="apps_uninstalled">
+        <item quantity="one">Uninstalled %d app</item>
+        <item quantity="other">Uninstalled %d apps</item>
+    </plurals>
+    <string name="apps_cancel">Cancel</string>
+
+    <string name="apps_force_stop">Force stop</string>
+    <string name="apps_force_stop_selected">Force stop %1$d</string>
+    <string name="apps_app_info">App info</string>
+    <string name="apps_more">More options for %1$s</string>
+    <plurals name="apps_force_stopped">
+        <item quantity="one">Stopped %d app</item>
+        <item quantity="other">Stopped %d apps</item>
+    </plurals>
+    <string name="apps_uninstall_silent_body">Advanced mode is on, so they are removed right away without one dialog per app. Their data will be deleted.</string>
+    <string name="apps_bloatware">Pre-installed apps</string>
+
+    <string name="bloat_title">Pre-installed apps</string>
+    <string name="bloat_back">Back</string>
+    <string name="bloat_intro">Apps your phone maker installed that are safe to remove. They are removed for your user only: the system keeps a copy, so you can restore them here at any time.</string>
+    <string name="bloat_recommended">Recommended to remove</string>
+    <string name="bloat_removed">Removed or disabled</string>
+    <string name="bloat_none">Nothing to remove. Your phone is already clean.</string>
+    <string name="bloat_unused">Pre-installed apps you never open</string>
+    <string name="bloat_unused_hint">Found on this phone from your usage, whatever the brand. Clock, calendar, mail, camera, gallery, browser, app stores and apps working in the background are left out. Some apps still work without being opened (backup, a watch, a car): only turn off what you know. Turning off is undone with Restore below.</string>
+    <string name="bloat_unused_needs_usage">Allow usage access in Settings to find pre-installed apps you never open.</string>
+    <string name="bloat_unused_none">Every pre-installed app here has been used in the last month.</string>
+    <string name="bloat_remove">Remove</string>
+    <string name="bloat_disable">Disable</string>
+    <string name="bloat_restore">Restore</string>
+    <string name="bloat_state_removed">Removed</string>
+    <string name="bloat_state_disabled">Disabled</string>
+    <string name="bloat_reason_facebook">Facebook service pre-installed by the manufacturer</string>
+    <string name="bloat_reason_ads">Ads and usage tracking by the manufacturer</string>
+    <string name="bloat_reason_extra">Pre-installed extra that nothing else depends on</string>
+    <string name="bloat_reason_unused">Not opened for over a month</string>
+    <string name="bloat_done_removed">Removed %1$s</string>
+    <string name="bloat_done_disabled">Disabled %1$s</string>
+    <string name="bloat_done_restored">Restored %1$s</string>
+    <string name="bloat_failed">Could not change %1$s</string>
+    <string name="bloat_needs_shizuku">Start Shizuku (or turn on root mode) in Settings to manage pre-installed apps.</string>
+</resources>

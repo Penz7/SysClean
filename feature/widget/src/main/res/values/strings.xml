@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">SysClean health</string>
+    <string name="widget_description">Your device health score, storage and memory at a glance</string>
+    <string name="widget_title">Device health</string>
+    <string name="widget_status_good">Good</string>
+    <string name="widget_status_fair">Needs attention</string>
+    <string name="widget_status_poor">Clean up</string>
+    <string name="widget_status_unknown">Measuring…</string>
+    <string name="widget_storage">Storage</string>
+    <string name="widget_storage_free">%1$s free</string>
+    <string name="widget_ram">RAM</string>
+    <string name="widget_battery">Battery %1$d%%</string>
+    <string name="widget_scan_hint">Scan in the app to include junk</string>
+</resources>

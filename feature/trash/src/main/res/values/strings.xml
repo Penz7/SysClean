@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trash_title">Recycle bin</string>
+    <string name="trash_back">Back</string>
+    <string name="trash_summary">%1$s · %2$s · kept for %3$d days</string>
+    <string name="trash_empty_action">Empty bin</string>
+    <string name="trash_restore">Restore</string>
+    <string name="trash_delete">Delete forever</string>
+    <string name="trash_restored">Restored to its original folder</string>
+    <string name="trash_deleted">Deleted for good</string>
+    <string name="trash_emptied">Recycle bin emptied</string>
+    <string name="trash_confirm_empty_title">Empty the Recycle bin?</string>
+    <string name="trash_confirm_empty_body">%1$s will be deleted for good. This cannot be undone.</string>
+    <string name="trash_confirm_delete_title">Delete for good?</string>
+    <string name="trash_confirm_delete_body">\"%1$s\" cannot be restored afterwards.</string>
+    <string name="trash_cancel">Cancel</string>
+    <string name="trash_nothing_title">The Recycle bin is empty</string>
+    <string name="trash_nothing_body">Files you clean stay here for a while so you can change your mind.</string>
+</resources>

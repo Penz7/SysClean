@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Settings</string>
+
+    <string name="settings_mode_title">Access mode</string>
+    <string name="settings_mode_current">Current mode</string>
+    <string name="settings_mode_normal_body">Analysis runs with standard Android permissions. Deep clean features need Shizuku or root.</string>
+    <string name="settings_mode_advanced_body">Using %1$s: cleaning Android/data, one-tap cache clearing, force stop and pre-installed app removal are unlocked.</string>
+
+    <string name="settings_permissions_title">Required permissions</string>
+    <string name="settings_all_files">All files access</string>
+    <string name="settings_all_files_desc">Scan the whole internal storage for junk, duplicates and large files.</string>
+    <string name="settings_storage_legacy">Storage access</string>
+    <string name="settings_usage">Usage access</string>
+    <string name="settings_usage_desc">Read app sizes, cache sizes and when each app was last used.</string>
+    <string name="settings_grant">Grant</string>
+
+    <string name="settings_advanced_title">Advanced mode (Shizuku or root)</string>
+    <string name="settings_advanced_intro">Android blocks normal apps from these areas. Install Shizuku (no root needed) or root your device to unlock:</string>
+    <string name="settings_advanced_feature_data">Read and clean Android/data and Android/obb</string>
+    <string name="settings_advanced_feature_cache">Clear the cache of every app at once, without tapping through Settings</string>
+    <string name="settings_advanced_feature_stop">Force-stop apps running in the background</string>
+    <string name="settings_advanced_feature_bloat">Disable or uninstall pre-installed bloatware</string>
+    <string name="settings_shizuku">Shizuku</string>
+    <string name="settings_shizuku_not_installed">Not installed</string>
+    <string name="settings_shizuku_not_running">Installed but not running</string>
+    <string name="settings_shizuku_permission">Running, permission needed</string>
+    <string name="settings_shizuku_ready">Ready</string>
+    <string name="settings_shizuku_install">Download Shizuku</string>
+    <string name="settings_shizuku_open">Open Shizuku</string>
+    <string name="settings_shizuku_grant">Allow SysClean</string>
+    <string name="settings_shizuku_hint">Start Shizuku with Wireless debugging (Android 11+) or with a computer over ADB. It must be started again after each reboot.</string>
+    <string name="settings_root">Root</string>
+    <string name="settings_root_detected">Detected</string>
+    <string name="settings_root_not_detected">Not detected</string>
+    <string name="settings_root_hint">Root is optional. SysClean only calls su after you tap \"Turn on root mode\"; your root manager (Magisk, KernelSU…) will ask you to allow it.</string>
+
+    <string name="settings_language_title">Language</string>
+    <string name="settings_language_system">System default</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+
+    <string name="settings_about_title">About</string>
+    <string name="settings_version">Version</string>
+
+    <string name="settings_cleaning_title">Cleaning</string>
+    <string name="settings_trash">Recycle bin</string>
+    <string name="settings_trash_desc">Restore or permanently delete cleaned files</string>
+    <string name="settings_retention">Keep cleaned files for</string>
+    <plurals name="settings_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <string name="settings_whitelist">Ignored items</string>
+    <string name="settings_whitelist_desc">%1$d items are never reported as junk</string>
+    <string name="whitelist_title">Ignored items</string>
+    <string name="whitelist_back">Back</string>
+    <string name="whitelist_remove">Stop ignoring</string>
+    <string name="whitelist_empty_title">Nothing is ignored</string>
+    <string name="whitelist_empty_body">In a junk category, use the ⋮ menu on an item and choose "Never show this again".</string>
+
+    <string name="settings_shizuku_guide">How to start Shizuku (no root)</string>
+    <string name="settings_shizuku_step1">Install Shizuku from Google Play.</string>
+    <string name="settings_shizuku_step2">Turn on Developer options: Settings › About phone (on some phones › Software information) › tap \"Build number\" 7 times. On some brands it is the OS version instead (MIUI, HyperOS, ColorOS…).</string>
+    <string name="settings_shizuku_step3">In Developer options, turn on \"Wireless debugging\" (Wi-Fi must be on).</string>
+    <string name="settings_shizuku_step4">In Shizuku tap "Pairing" and allow its notification. In Wireless debugging tap "Pair device with pairing code" and type the code into the Shizuku notification.</string>
+    <string name="settings_shizuku_step5">Back in Shizuku tap "Start", then return here and tap "Allow SysClean".</string>
+    <string name="settings_shizuku_step_pc">With a computer: connect over USB with USB debugging on and run the adb command shown in Shizuku.</string>
+    <string name="settings_shizuku_step_pc_only">Android 10 and older have no wireless debugging: turn on \"USB debugging\", connect to a computer and run the adb command shown in Shizuku. Repeat after each restart.</string>
+    <string name="settings_open_dev_options">Open Developer options</string>
+
+    <string name="settings_shizuku_xiaomi_title">Xiaomi limits adb permissions</string>
+    <string name="settings_shizuku_xiaomi_body">If Shizuku says "adb permissions are limited": in Developer options turn on "USB debugging (Security settings)" (needs a SIM card and a Mi account), restart Shizuku, then tap "Allow SysClean" again.</string>
+    <string name="settings_shizuku_coloros_title">OPPO, realme and OnePlus revoke adb permissions</string>
+    <string name="settings_shizuku_coloros_body">In Developer options turn on \"Disable permission monitoring\", then start Shizuku again and tap \"Allow SysClean\".</string>
+    <string name="settings_shizuku_flyme_title">Meizu blocks adb</string>
+    <string name="settings_shizuku_flyme_body">In Developer options turn off \"Flyme payment protection\", then start Shizuku again.</string>
+
+    <string name="settings_root_on">On</string>
+    <string name="settings_root_enable">Turn on root mode</string>
+    <string name="settings_root_disable">Turn off root mode</string>
+    <string name="settings_root_try">Rooted but not detected? Try anyway</string>
+    <string name="settings_root_waiting">Waiting for your root manager…</string>
+    <string name="settings_root_enabled">Root mode is on</string>
+    <string name="settings_root_denied">Root access was not granted</string>
+    <string name="settings_root_shizuku_first">Shizuku is used while it runs; root mode takes over when Shizuku stops.</string>
+
+    <string name="settings_widget_title">Home screen widget</string>
+    <string name="settings_widget_desc">See your health score, free storage and RAM without opening the app.</string>
+    <string name="settings_widget_add">Add to home screen</string>
+    <string name="settings_widget_manual">Your launcher cannot add widgets for apps. Long-press an empty spot on the home screen, choose Widgets, then SysClean.</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ui_yes">Yes</string>
+    <string name="ui_no">No</string>
+    <string name="ui_unknown">Unknown</string>
+    <string name="ui_granted">Granted</string>
+    <string name="ui_not_granted">Not granted</string>
+    <string name="ui_today">Today</string>
+    <string name="ui_never_used">No usage in the past year</string>
+    <plurals name="ui_days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+    <string name="ui_used_of_total">%1$s of %2$s</string>
+
+    <string name="ui_junk_app_cache">App cache</string>
+    <string name="ui_junk_temp">Temporary &amp; log files</string>
+    <string name="ui_junk_thumbnails">Thumbnail cache</string>
+    <string name="ui_junk_apk">APK files</string>
+    <string name="ui_junk_empty">Empty folders</string>
+    <string name="ui_junk_leftover">Leftover folders</string>
+    <string name="ui_junk_duplicates">Duplicate files</string>
+    <string name="ui_junk_large">Large files</string>
+    <string name="ui_junk_screenshots">Screenshots</string>
+    <string name="ui_junk_old_downloads">Old downloads</string>
+
+    <string name="ui_junk_app_cache_desc">Temporary data apps rebuild on their own</string>
+    <string name="ui_junk_temp_desc">.tmp, .log, .bak and unfinished downloads</string>
+    <string name="ui_junk_thumbnails_desc">Preview images the system regenerates</string>
+    <string name="ui_junk_apk_desc">Installer files you no longer need</string>
+    <string name="ui_junk_empty_desc">Folders with nothing inside</string>
+    <string name="ui_junk_leftover_desc">Media folders of apps you uninstalled</string>
+    <string name="ui_junk_duplicates_desc">Extra copies of the same file</string>
+    <string name="ui_junk_large_desc">Files over 100 MB – review before deleting</string>
+    <string name="ui_junk_screenshots_desc">Review and keep the ones you need</string>
+    <string name="ui_junk_old_downloads_desc">In Download, untouched for over 90 days</string>
+
+    <string name="ui_note_apk_installed">Already installed</string>
+    <string name="ui_note_apk_newer">Newer than installed</string>
+    <string name="ui_note_apk_not_installed">Not installed</string>
+    <string name="ui_note_apk_invalid">Damaged or incomplete</string>
+
+    <string name="ui_battery_charging">Charging</string>
+    <string name="ui_battery_discharging">Discharging</string>
+    <string name="ui_battery_not_charging">Not charging</string>
+    <string name="ui_battery_full">Full</string>
+
+    <string name="ui_health_good">Good</string>
+    <string name="ui_health_overheat">Overheating</string>
+    <string name="ui_health_dead">Dead</string>
+    <string name="ui_health_over_voltage">Over voltage</string>
+    <string name="ui_health_failure">Failure</string>
+    <string name="ui_health_cold">Too cold</string>
+
+    <string name="ui_plug_ac">AC charger</string>
+    <string name="ui_plug_usb">USB</string>
+    <string name="ui_plug_wireless">Wireless</string>
+    <string name="ui_plug_dock">Dock</string>
+    <string name="ui_plug_none">Not plugged in</string>
+
+    <string name="ui_thermal_none">Normal</string>
+    <string name="ui_thermal_light">Slightly warm</string>
+    <string name="ui_thermal_moderate">Warm</string>
+    <string name="ui_thermal_severe">Hot</string>
+    <string name="ui_thermal_critical">Very hot</string>
+    <string name="ui_thermal_emergency">Emergency</string>
+    <string name="ui_thermal_shutdown">Shutting down</string>
+
+    <string name="ui_access_normal">Normal</string>
+    <string name="ui_access_shizuku">Shizuku</string>
+    <string name="ui_access_root">Root</string>
+
+    <string name="ui_junk_similar">Similar photos</string>
+    <string name="ui_junk_blurry">Blurry photos</string>
+    <string name="ui_junk_similar_desc">Near-identical shots – the sharpest one is kept</string>
+    <string name="ui_junk_blurry_desc">Out of focus or shaken – review before deleting</string>
+    <plurals name="ui_expires_in">
+        <item quantity="one">Deleted for good in %d day</item>
+        <item quantity="other">Deleted for good in %d days</item>
+    </plurals>
+    <string name="ui_expires_today">Deleted for good today</string>
+    <plurals name="ui_items">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+</resources>

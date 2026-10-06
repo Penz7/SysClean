@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cleaner_back">Back</string>
+    <string name="cleaner_summary">%1$s · %2$s</string>
+    <string name="cleaner_selected">%1$d selected · %2$s</string>
+    <string name="cleaner_select_all">Select all</string>
+    <string name="cleaner_select_none">Clear</string>
+    <string name="cleaner_select_extras">Keep best only</string>
+    <string name="cleaner_clean_button">Clean %1$d · %2$s</string>
+    <string name="cleaner_progress">Cleaning %1$d of %2$d…</string>
+    <string name="cleaner_group">Set %1$d · %2$d files</string>
+    <string name="cleaner_keep">Keep</string>
+    <string name="cleaner_ignore">Never show this again</string>
+    <string name="cleaner_ignored">Added to ignored items</string>
+    <string name="cleaner_more">More</string>
+
+    <string name="cleaner_confirm_title">Move %1$d items to the Recycle bin?</string>
+    <string name="cleaner_confirm_body">They free %1$s now. You can restore them from the Recycle bin for %2$d days.</string>
+    <string name="cleaner_confirm_empty_title">Delete %1$d empty folders?</string>
+    <string name="cleaner_confirm_empty_body">Empty folders hold no files, so they are deleted right away.</string>
+    <string name="cleaner_confirm_action">Clean</string>
+    <string name="cleaner_cancel">Cancel</string>
+
+    <string name="cleaner_result">Moved %1$d items (%2$s) to the Recycle bin</string>
+    <string name="cleaner_result_folders">Deleted %1$d empty folders</string>
+    <string name="cleaner_result_unverified">%1$d copies skipped: their content did not fully match</string>
+    <string name="cleaner_result_failed">%1$d items could not be moved</string>
+    <string name="cleaner_undo">Undo</string>
+    <string name="cleaner_restored">Restored %1$d items</string>
+
+    <string name="cleaner_done_title">All clean</string>
+    <string name="cleaner_done_body">Nothing left in this category.</string>
+    <string name="cleaner_no_scan_title">No scan results</string>
+    <string name="cleaner_no_scan_body">Run a scan from the Overview tab first.</string>
+
+    <string name="cleaner_app_cache_hint">Android lets normal apps clear other apps\' cache only through a system dialog.</string>
+    <string name="cleaner_app_cache_button">Clear cache of all apps</string>
+    <string name="cleaner_app_cache_legacy">On this Android version, tap an app to open its info page and clear its cache there.</string>
+    <string name="cleaner_app_cache_done">App cache cleared</string>
+    <string name="cleaner_app_open">Tap to open app info</string>
+
+    <string name="cleaner_result_deleted">Cleaned %1$d items · %2$s freed</string>
+    <string name="cleaner_privileged_note">Folders inside Android/data and Android/obb are deleted for good; they do not go to the Recycle bin.</string>
+    <string name="cleaner_app_cache_confirm_title">Clear the cache of %1$d apps?</string>
+    <string name="cleaner_app_cache_confirm_body">Apps rebuild their cache when needed. Per app only the cache in Android/data can be cleared; use "Clear all cache" to include internal cache.</string>
+    <string name="cleaner_clear_all">Clear all cache (incl. internal)</string>
+    <string name="cleaner_clear_all_title">Clear the cache of every app?</string>
+    <string name="cleaner_clear_all_body">Android frees the cache of all apps, the same as when storage runs low. Apps stay signed in and keep their data.</string>
+    <string name="cleaner_clear_all_running">Clearing all app cache…</string>
+    <string name="cleaner_clear_all_done">Freed %1$s of app cache</string>
+    <string name="cleaner_shizuku_hint">Advanced mode is on: tick apps to clear their cache directly.</string>
+
+    <string name="cleaner_confirm_delete_title">Delete %1$d items for good?</string>
+    <string name="cleaner_full_cache">Whole cache %1$s, incl. internal</string>
+    <string name="cleaner_confirm_delete_body">This frees %1$s and cannot be undone.</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">SysClean</string>
+    <string name="nav_dashboard">Overview</string>
+    <string name="nav_device">Device</string>
+    <string name="nav_apps">Apps</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_performance">Speed</string>
+</resources>

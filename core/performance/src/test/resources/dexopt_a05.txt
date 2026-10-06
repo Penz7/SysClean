@@ -1,0 +1,329 @@
+Dexopt state:
+  [android]
+  [android.auto_generated_rro_product__]
+    path: /product/overlay/framework-res__a05mxx__auto_generated_rro_product.apk
+      arm64: [status=unknown] [reason=unknown] [primary-abi]
+        [location is none]
+  [android.autoinstalls.config.samsung]
+  [com.android.backupconfirm]
+    path: /system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/BackupRestoreConfirmation/oat/arm64/BackupRestoreConfirmation.vdex]
+  [com.android.bips]
+    path: /system/priv-app/BuiltInPrintService/BuiltInPrintService.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/BuiltInPrintService/oat/arm64/BuiltInPrintService.vdex]
+  [com.android.bluetooth]
+    path: /apex/com.android.btservices/app/Bluetooth@AP3A.240905.015.A2/Bluetooth.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/apex@com.android.btservices@app@Bluetooth@AP3A.240905.015.A2@Bluetooth.apk@classes.dex]
+  [com.android.bluetoothmidiservice]
+    path: /system/app/BluetoothMidiService/BluetoothMidiService.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/BluetoothMidiService/oat/arm64/BluetoothMidiService.vdex]
+  [com.android.bookmarkprovider]
+    path: /system/app/BookmarkProvider/BookmarkProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/BookmarkProvider/oat/arm64/BookmarkProvider.vdex]
+  [com.android.calllogbackup]
+    path: /system/priv-app/CallLogBackup/CallLogBackup.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/CallLogBackup/oat/arm64/CallLogBackup.vdex]
+  [com.android.cameraextensions]
+    path: /system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/CameraExtensionsProxy/oat/arm64/CameraExtensionsProxy.vdex]
+  [com.android.carrierconfig]
+    path: /system_ext/priv-app/CarrierConfig/CarrierConfig.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system_ext/priv-app/CarrierConfig/oat/arm64/CarrierConfig.vdex]
+  [com.android.carrierdefaultapp]
+    path: /system/app/CarrierDefaultApp/CarrierDefaultApp.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/CarrierDefaultApp/oat/arm64/CarrierDefaultApp.vdex]
+  [com.android.certinstaller]
+    path: /system/app/CertInstaller/CertInstaller.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/CertInstaller/oat/arm64/CertInstaller.vdex]
+  [com.android.chrome]
+    path: /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/base.apk
+      arm64: [status=speed-profile] [reason=install-dm] [primary-abi]
+        [location is /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/oat/arm64/base.odex]
+    path: /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_chrome.apk
+      arm64: [status=verify] [reason=vdex-dm] [primary-abi]
+        [location is primary.vdex mapped directly in memory from /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_chrome.dm]
+    path: /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_dev_ui.apk
+      arm64: [status=verify] [reason=vdex-dm] [primary-abi]
+        [location is primary.vdex mapped directly in memory from /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_dev_ui.dm]
+    path: /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_on_demand.apk
+      arm64: [status=verify] [reason=vdex-dm] [primary-abi]
+        [location is primary.vdex mapped directly in memory from /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_on_demand.dm]
+    path: /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_stack_unwinder.apk
+      arm64: [status=verify] [reason=vdex-dm] [primary-abi]
+        [location is primary.vdex mapped directly in memory from /data/app/~~vb4_vCSzJd7nYodqCCew0g==/com.android.chrome-Ikzij_EJEKR2DGBngP5_4Q==/split_stack_unwinder.dm]
+  [com.android.companiondevicemanager]
+    path: /system/app/CompanionDeviceManager/CompanionDeviceManager.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/CompanionDeviceManager/oat/arm64/CompanionDeviceManager.vdex]
+  [com.android.companiondevicemanager.auto_generated_characteristics_rro]
+  [com.android.credentialmanager]
+    path: /system/priv-app/CredentialManager/CredentialManager.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@CredentialManager@CredentialManager.apk@classes.dex]
+  [com.android.cts.ctsshim]
+  [com.android.cts.priv.ctsshim]
+  [com.android.devicediagnostics]
+    path: /system/priv-app/DeviceDiagnostics/DeviceDiagnostics.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/DeviceDiagnostics/oat/arm64/DeviceDiagnostics.vdex]
+  [com.android.dreams.basic]
+    path: /system/app/BasicDreams/BasicDreams.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/BasicDreams/oat/arm64/BasicDreams.vdex]
+  [com.android.dreams.phototable]
+    path: /system/app/PhotoTable/PhotoTable.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/PhotoTable/oat/arm64/PhotoTable.vdex]
+  [com.android.dynsystem]
+    path: /system/priv-app/DynamicSystemInstallationService/DynamicSystemInstallationService.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/DynamicSystemInstallationService/oat/arm64/DynamicSystemInstallationService.vdex]
+  [com.android.egg]
+    path: /system/app/EasterEgg/EasterEgg.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/EasterEgg/oat/arm64/EasterEgg.vdex]
+  [com.android.externalstorage]
+    path: /system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/ExternalStorageProvider/oat/arm64/ExternalStorageProvider.vdex]
+  [com.android.hotspot2.osulogin]
+    path: /apex/com.android.wifi/app/OsuLogin@AP3A.240905.015.A2/OsuLogin.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/apex@com.android.wifi@app@OsuLogin@AP3A.240905.015.A2@OsuLogin.apk@classes.vdex]
+  [com.android.htmlviewer]
+    path: /system/app/SecHTMLViewer/SecHTMLViewer.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/SecHTMLViewer/oat/arm64/SecHTMLViewer.vdex]
+  [com.android.inputdevices]
+    path: /system/priv-app/InputDevices/InputDevices.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/InputDevices/oat/arm64/InputDevices.vdex]
+  [com.android.intentresolver]
+    path: /system/priv-app/IntentResolver/IntentResolver.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/IntentResolver/oat/arm64/IntentResolver.vdex]
+  [com.android.internal.display.cutout.emulation.corner]
+  [com.android.internal.display.cutout.emulation.double]
+  [com.android.internal.display.cutout.emulation.hole]
+  [com.android.internal.display.cutout.emulation.tall]
+  [com.android.internal.display.cutout.emulation.waterfall]
+  [com.android.internal.systemui.navbar.gestural]
+  [com.android.internal.systemui.navbar.threebutton]
+  [com.android.internal.systemui.navbar.transparent]
+  [com.android.keychain]
+    path: /system/app/KeyChain/KeyChain.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/KeyChain/oat/arm64/KeyChain.vdex]
+  [com.android.localtransport]
+    path: /system/priv-app/LocalTransport/LocalTransport.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/LocalTransport/oat/arm64/LocalTransport.vdex]
+  [com.android.location.fused]
+    path: /system/priv-app/FusedLocation/FusedLocation.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/FusedLocation/oat/arm64/FusedLocation.vdex]
+  [com.android.managedprovisioning]
+    path: /system/priv-app/ManagedProvisioning/ManagedProvisioning.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/ManagedProvisioning/oat/arm64/ManagedProvisioning.vdex]
+  [com.android.mms.service]
+    path: /system/priv-app/MmsService/MmsService.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/MmsService/oat/arm64/MmsService.vdex]
+  [com.android.mtp]
+    path: /system/priv-app/MtpService/MtpService.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@MtpService@MtpService.apk@classes.vdex]
+      used by other apps: [com.android.providers.downloads (isa=arm64), com.samsung.android.mtp (isa=arm64), com.samsung.android.providers.media (isa=arm64)]
+  [com.android.ons]
+    path: /system/priv-app/ONS/ONS.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@ONS@ONS.apk@classes.vdex]
+      used by other apps: [com.android.phone (isa=arm64)]
+  [com.android.pacprocessor]
+    path: /system/app/PacProcessor/PacProcessor.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/PacProcessor/oat/arm64/PacProcessor.vdex]
+  [com.android.phone]
+    path: /system/priv-app/TeleService/TeleService.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@TeleService@TeleService.apk@classes.dex]
+  [com.android.phone.auto_generated_characteristics_rro]
+  [com.android.printspooler]
+    path: /system/app/PrintSpooler/PrintSpooler.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/PrintSpooler/oat/arm64/PrintSpooler.vdex]
+  [com.android.providers.blockednumber]
+    path: /system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@BlockedNumberProvider@BlockedNumberProvider.apk@classes.vdex]
+      used by other apps: [com.samsung.android.providers.contacts (isa=arm64)]
+  [com.android.providers.calendar]
+    path: /system/priv-app/SamsungCalendarProvider/SamsungCalendarProvider.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@SamsungCalendarProvider@SamsungCalendarProvider.apk@classes.dex]
+  [com.android.providers.contactkeys]
+    path: /system/priv-app/E2eeContactKeysProvider/E2eeContactKeysProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@E2eeContactKeysProvider@E2eeContactKeysProvider.apk@classes.vdex]
+      used by other apps: [com.android.providers.blockednumber (isa=arm64), com.samsung.android.providers.contacts (isa=arm64)]
+  [com.android.providers.downloads]
+    path: /system/priv-app/SecDownloadProvider/SecDownloadProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@SecDownloadProvider@SecDownloadProvider.apk@classes.vdex]
+      used by other apps: [com.android.mtp (isa=arm64), com.samsung.android.mtp (isa=arm64), com.samsung.android.providers.media (isa=arm64)]
+  [com.android.providers.downloads.ui]
+    path: /system/priv-app/DownloadProviderUi/DownloadProviderUi.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/DownloadProviderUi/oat/arm64/DownloadProviderUi.vdex]
+  [com.android.providers.media]
+    path: /system/priv-app/MediaProviderLegacy/MediaProviderLegacy.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@MediaProviderLegacy@MediaProviderLegacy.apk@classes.vdex]
+      used by other apps: [com.android.mtp (isa=arm64), com.android.providers.downloads (isa=arm64), com.samsung.android.mtp (isa=arm64), com.samsung.android.providers.media (isa=arm64)]
+  [com.android.providers.partnerbookmarks]
+    path: /system/app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/PartnerBookmarksProvider/oat/arm64/PartnerBookmarksProvider.vdex]
+  [com.android.providers.settings]
+    path: /system/priv-app/SettingsProvider/SettingsProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/SettingsProvider/oat/arm64/SettingsProvider.vdex]
+  [com.android.providers.telephony]
+    path: /system/priv-app/SecTelephonyProvider/SecTelephonyProvider.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@SecTelephonyProvider@SecTelephonyProvider.apk@classes.dex]
+      used by other apps: [com.android.phone (isa=arm64)]
+  [com.android.providers.telephony.auto_generated_characteristics_rro]
+  [com.android.providers.userdictionary]
+    path: /system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@UserDictionaryProvider@UserDictionaryProvider.apk@classes.vdex]
+      used by other apps: [com.android.providers.blockednumber (isa=arm64), com.samsung.android.providers.contacts (isa=arm64)]
+  [com.android.proxyhandler]
+    path: /system/priv-app/ProxyHandler/ProxyHandler.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/ProxyHandler/oat/arm64/ProxyHandler.vdex]
+  [com.android.rkpdapp]
+    path: /apex/com.android.rkpd/priv-app/rkpdapp@AP3A.240905.015.A2/rkpdapp.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/apex@com.android.rkpd@priv-app@rkpdapp@AP3A.240905.015.A2@rkpdapp.apk@classes.vdex]
+  [com.android.role.notes.enabled]
+  [com.android.se]
+    path: /system/app/SecureElement/SecureElement.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/SecureElement/oat/arm64/SecureElement.vdex]
+  [com.android.server.telecom]
+    path: /system/priv-app/Telecom/Telecom.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/Telecom/oat/arm64/Telecom.vdex]
+  [com.android.settings]
+    path: /system/priv-app/SecSettings/SecSettings.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@SecSettings@SecSettings.apk@classes.dex]
+  [com.android.settings.intelligence]
+    path: /system/priv-app/SecSettingsIntelligence/SecSettingsIntelligence.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@priv-app@SecSettingsIntelligence@SecSettingsIntelligence.apk@classes.dex]
+  [com.android.sharedstoragebackup]
+    path: /system/priv-app/SharedStorageBackup/SharedStorageBackup.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/SharedStorageBackup/oat/arm64/SharedStorageBackup.vdex]
+  [com.android.shell]
+    path: /system/priv-app/Shell/Shell.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/Shell/oat/arm64/Shell.vdex]
+  [com.android.simappdialog]
+    path: /system/app/SimAppDialog/SimAppDialog.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/SimAppDialog/oat/arm64/SimAppDialog.vdex]
+  [com.android.stk]
+    path: /system/app/Stk/Stk.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@app@Stk@Stk.apk@classes.vdex]
+      used by other apps: [com.android.phone (isa=arm64)]
+  [com.android.stk2]
+    path: /system/app/Stk2/Stk2.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system@app@Stk2@Stk2.apk@classes.vdex]
+      used by other apps: [com.android.phone (isa=arm64)]
+  [com.android.storagemanager]
+    path: /system_ext/priv-app/StorageManager/StorageManager.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system_ext/priv-app/StorageManager/oat/arm64/StorageManager.vdex]
+  [com.android.systemui]
+    path: /system_ext/priv-app/SystemUI/SystemUI.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/dalvik-cache/arm64/system_ext@priv-app@SystemUI@SystemUI.apk@classes.dex]
+  [com.android.theme.font.notoserifsource]
+  [com.android.traceur]
+    path: /system/app/Traceur/Traceur.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/Traceur/oat/arm64/Traceur.vdex]
+  [com.android.uwb.resources]
+  [com.android.vending]
+    path: /data/app/~~Dm89yr0QfDibDXVi5mOItg==/com.android.vending-FkeS6KudvgTygPCS0KQcpQ==/base.apk
+      arm64: [status=speed-profile] [reason=install-dm] [primary-abi]
+        [location is /data/app/~~Dm89yr0QfDibDXVi5mOItg==/com.android.vending-FkeS6KudvgTygPCS0KQcpQ==/oat/arm64/base.odex]
+      used by other apps: [com.android.vending (isolated) (isa=arm64)]
+    known secondary dex files:
+      /data/user/0/com.android.vending/app_dg_cache/366FD1971196856B493CF12403F7A18D869C1A13/the.apk
+        arm64: [status=verify] [reason=bg-dexopt] [primary-abi]
+          [location is /data/user/0/com.android.vending/app_dg_cache/366FD1971196856B493CF12403F7A18D869C1A13/oat/arm64/the.odex]
+        class loader context: =UnsupportedClassLoaderContext=
+      /data/user/0/com.android.vending/app_dg_cache/6EF5C2E3C39D601B699E493E3C02879B45CBDB40/the.apk (removed)
+        arm64: [status=unknown] [reason=unknown] [primary-abi]
+          [location is error]
+        class loader context: =UnsupportedClassLoaderContext=
+      /data/user/0/com.android.vending/app_dg_cache/AEB5BC832EBF3852F39BA4BE495DD40566104436/the.apk (removed)
+        arm64: [status=unknown] [reason=unknown] [primary-abi]
+          [location is error]
+        class loader context: =UnsupportedClassLoaderContext=
+      /data/user/0/com.android.vending/app_dg_cache/D319D8C3DC71B672EA84C1992BA95AC108DDC9CF/the.apk (removed)
+        arm64: [status=unknown] [reason=unknown] [primary-abi]
+          [location is error]
+        class loader context: =UnsupportedClassLoaderContext=
+      /data/user/0/com.android.vending/app_dg_cache/D6F3613D77E3345A974691A7A7DC69F4388889A4/the.apk
+        arm64: [status=verify] [reason=vdex] [primary-abi]
+          [location is /data/user/0/com.android.vending/app_dg_cache/D6F3613D77E3345A974691A7A7DC69F4388889A4/oat/arm64/the.vdex]
+        class loader context: PCL[];PCL[/data/app/~~Dm89yr0QfDibDXVi5mOItg==/com.android.vending-FkeS6KudvgTygPCS0KQcpQ==/base.apk]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system_ext/framework/androidx.window.extensions.jar]#PCL[/system_ext/framework/androidx.window.sidecar.jar]}
+      /data/user/0/com.android.vending/app_dg_cache/D7B77D0A5C81560DEC3D5970D91F7DE4B29C9599/the.apk
+        arm64: [status=verify] [reason=vdex] [primary-abi]
+          [location is /data/user/0/com.android.vending/app_dg_cache/D7B77D0A5C81560DEC3D5970D91F7DE4B29C9599/oat/arm64/the.vdex]
+        class loader context: PCL[];PCL[/data/app/~~Dm89yr0QfDibDXVi5mOItg==/com.android.vending-FkeS6KudvgTygPCS0KQcpQ==/base.apk]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system_ext/framework/androidx.window.extensions.jar]#PCL[/system_ext/framework/androidx.window.sidecar.jar]}
+      /data/user/0/com.android.vending/app_dg_cache/F43216EC192C66BFB5A30C3CDD57E8C5C9005730/the.apk (removed)
+        arm64: [status=unknown] [reason=unknown] [primary-abi]
+          [location is error]
+        class loader context: =UnsupportedClassLoaderContext=
+  [com.android.virtualmachine.res]
+  [com.android.vpndialogs]
+    path: /system/priv-app/VpnDialogs/VpnDialogs.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/VpnDialogs/oat/arm64/VpnDialogs.vdex]
+  [com.android.wallpaper.livepicker]
+    path: /system/priv-app/LiveWallpapersPicker/LiveWallpapersPicker.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/priv-app/LiveWallpapersPicker/oat/arm64/LiveWallpapersPicker.vdex]
+  [com.android.wallpaperbackup]
+    path: /system/app/WallpaperBackup/WallpaperBackup.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system/app/WallpaperBackup/oat/arm64/WallpaperBackup.vdex]
+  [com.android.wallpapercropper]
+    path: /system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex]
+  [com.android.wifi.dialog]
+    path: /apex/com.android.wifi/app/WifiDialog@AP3A.240905.015.A2/WifiDialog.apk
+      arm64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/dalvik-cache/arm64/apex@com.android.wifi@app@WifiDialog@AP3A.240905.015.A2@WifiDialog.apk@classes.vdex]
+  [com.android.wifi.resources]

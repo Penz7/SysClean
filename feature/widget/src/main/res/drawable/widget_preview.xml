@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shown in the widget picker: a rounded card with a score ring. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F1F5F2" />
+            <corners android:radius="24dp" />
+            <size android:width="160dp" android:height="160dp" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:width="96dp" android:height="96dp">
+        <shape android:shape="oval">
+            <stroke android:width="10dp" android:color="#1E8E5A" />
+        </shape>
+    </item>
+</layer-list>

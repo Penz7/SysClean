@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trash_title">Thùng rác</string>
+    <string name="trash_back">Quay lại</string>
+    <string name="trash_summary">%1$s · %2$s · giữ trong %3$d ngày</string>
+    <string name="trash_empty_action">Dọn sạch thùng rác</string>
+    <string name="trash_restore">Khôi phục</string>
+    <string name="trash_delete">Xóa vĩnh viễn</string>
+    <string name="trash_restored">Đã khôi phục về thư mục cũ</string>
+    <string name="trash_deleted">Đã xóa vĩnh viễn</string>
+    <string name="trash_emptied">Đã dọn sạch thùng rác</string>
+    <string name="trash_confirm_empty_title">Dọn sạch Thùng rác?</string>
+    <string name="trash_confirm_empty_body">%1$s sẽ bị xóa vĩnh viễn. Không thể hoàn tác.</string>
+    <string name="trash_confirm_delete_title">Xóa vĩnh viễn?</string>
+    <string name="trash_confirm_delete_body">Sau khi xóa sẽ không thể khôi phục \"%1$s\".</string>
+    <string name="trash_cancel">Hủy</string>
+    <string name="trash_nothing_title">Thùng rác trống</string>
+    <string name="trash_nothing_body">File bạn dọn sẽ nằm ở đây một thời gian để bạn có thể đổi ý.</string>
+</resources>
